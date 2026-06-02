@@ -1,0 +1,8 @@
+<div class="metrics-row">
+    @for (metric of metrics; track metric.label) {
+        <div class="metric-item">
+            <p class="metric-label">{{ metric.label }}</p>
+            <p class="metric-description">{{ metric.description }}</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,60 @@
+<div class="tacit-knowledge-case-study">
+    <app-case-study-hero-component [title]="'Capturing Tacit Knowledge:'"
+        [subtitle]="'Agreement Invoicing Process Documentation'" [company]="'ProviDyn'"
+        [role]="'Contract Senior Technical Writer - User Research & Workflow Analysis'" [year]="'2022'"
+        [tags]="['Contextual Inquiry', 'Workflow Analysis', 'Qualitative Research']"
+        [summary]="'Preserving a retiring employee\'s institutional knowledge of a complex monthly workflow — before it walked out the door with her.'"></app-case-study-hero-component>
+
+    <app-context-strip-component [items]="contextItems"></app-context-strip-component>
+
+    <section class="challenge-approach">
+        <div class="challenge">
+            <h2>The Challenge</h2>
+            <p>
+                A retiring employee held exclusive knowledge of a monthly Agreement Invoicing
+                process spanning 11 systems with no automatic integration between them. Processes
+                like this — built up from years of workarounds, exceptions, and in-the-moment
+                judgment calls — don't survive a standard knowledge transfer interview. The only
+                way to capture them is to watch them happen.
+            </p>
+        </div>
+        <div class="approach">
+            <h2>The Approach</h2>
+            <p>
+                I used contextual inquiry and shadowing sessions, observing the process live and
+                asking follow-up questions in the moment. This surfaced what official documentation
+                never captures: the unofficial steps, edge-case decisions, and hard-won workarounds
+                that only become visible when you watch the work being done.
+            </p>
+        </div>
+    </section>
+
+    <app-process-steps-component [steps]="processSteps"></app-process-steps-component>
+
+    <section class="artifact">
+        <h2>The Deliverable</h2>
+        <figure>
+            <img src="agreement-invoicing-workflow-map.png"
+                alt="Agreement Invoicing workflow map spanning 11 systems" />
+            <figcaption>
+                Agreement Invoicing workflow map — documenting official steps, workarounds,
+                and exception-handling across 11 systems
+            </figcaption>
+        </figure>
+    </section>
+
+    <section class="outcomes">
+        <h2>Outcomes</h2>
+        <ul>
+            <li>
+                The resulting workflow map captured tacit knowledge that would have been
+                permanently lost at the employee's departure.
+            </li>
+            <li>
+                The documentation served as a self-sufficient onboarding reference — the
+                incoming employee learned the full process independently, without any
+                subject matter expert assistance.
+            </li>
+        </ul>
+    </section>
+</div>

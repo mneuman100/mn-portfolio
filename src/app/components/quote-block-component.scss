@@ -1,0 +1,24 @@
+.quote-block {
+  padding: 3rem 0;
+
+  .quote {
+    font-size: var(--font-size-large);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.65;
+    padding-left: 2rem;
+    border-left: 3px solid var(--color-primary);
+    max-width: 48rem;
+    margin: 0 0 1rem;
+  }
+
+  .attribution {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-left: 2rem;
+    margin: 0;
+  }
+}

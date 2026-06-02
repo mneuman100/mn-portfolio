@@ -1,0 +1,8 @@
+<div class="process-steps">
+    @for (step of steps; track step.label) {
+        <div class="step-item">
+            <p class="step-label">{{ step.label }}</p>
+            <p class="step-description">{{ step.description }}</p>
+        </div>
+    }
+</div>

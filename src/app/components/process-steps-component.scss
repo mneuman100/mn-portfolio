@@ -1,0 +1,39 @@
+.process-steps {
+  counter-reset: steps;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 0;
+
+  .step-item {
+    counter-increment: steps;
+    padding: 1.5rem;
+    border: 1px solid #e2e2e2;
+    border-top: 3px solid var(--color-primary);
+    border-radius: 0.5rem;
+
+    &::before {
+      content: counter(steps, decimal-leading-zero);
+      display: block;
+      font-size: var(--font-size-medium);
+      font-weight: 700;
+      color: var(--color-primary);
+      opacity: 0.4;
+      margin: 0 0 0.75rem;
+    }
+  }
+
+  .step-label {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+  }
+
+  .step-description {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+  }
+}

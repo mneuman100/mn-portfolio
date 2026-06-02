@@ -1,0 +1,15 @@
+<div class="case-study-hero-component">
+    <h2 class="page-title">{{ title }}</h2>
+    @if (subtitle) {
+        <h3 class="page-subtitle">{{ subtitle }}</h3>
+    }
+    <p class="page-company-info">{{ company }} | {{ role }} | ({{ year }})</p>
+
+    <div class="tags">
+        @for (tag of tags; track tag) {
+            <p class="tag-chip">{{ tag }}</p>
+        }
+    </div>
+
+    <p clas="page-summary">{{ summary }}</p>
+</div>

@@ -1,0 +1,8 @@
+<div class="context-strip">
+    @for (item of items; track item.label) {
+        <div class="context-item">
+            <p class="context-label">{{ item.label }}</p>
+            <p class="context-description">{{ item.description }}</p>
+        </div>
+    }
+</div>
