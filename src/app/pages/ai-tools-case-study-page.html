@@ -1,1 +1,266 @@
-<p>ai-tools-case-study-page works!</p>
+<div class="ai-usability-case-study">
+    <app-case-study-hero-component
+        [title]="'Evaluating AI Before Committing to It'"
+        [subtitle]="'Structured usability evaluation of two AI tools that prevented premature adoption'"
+        [company]="'Origami Risk'"
+        [year]="'2024'"
+        [tags]="skills">
+    </app-case-study-hero-component>
+
+    <section class="paragraph">
+        <h2>Context</h2>
+        <p>At Origami Risk, I evaluated two AI tools, Guru AI and Command AI, for potential adoption across the
+            organization in 2024. Both were in active pilot phases and needed a closer look before anyone committed
+            to purchasing or deploying them more broadly. My job was to dig into how well they actually worked, from
+            the perspective of the documentation team and the clients who would ultimately use them.</p>
+    </section>
+
+    <section class="paragraph">
+        <h2>Background</h2>
+        <p>Guru AI would be an internal-facing tool used in both GURU, our knowledge management system, and SLACK,
+            our workplace communication tool.</p>
+        <p>Command AI would be a client-facing tool used to source information from our Help Center articles.</p>
+        <p>The goal was to assess each tool before any organizational commitment was made.</p>
+    </section>
+
+    <div class="tool-display">
+        <div class="tool-display__item tool-display__item--guru">
+            <div class="tool-display__logos">
+                <img src="guru.png" alt="Guru AI logo" />
+                <img src="slack.png" alt="Slack logo" />
+            </div>
+            <span class="tool-display__label">Internal tools</span>
+        </div>
+        <div class="tool-display__item tool-display__item--command">
+            <div class="tool-display__logos">
+                <img src="command-ai.png" alt="Command AI logo" />
+            </div>
+            <span class="tool-display__label">Client-facing tool</span>
+        </div>
+    </div>
+
+    <section class="comparison-section">
+        <h2 class="comparison-section__heading">Research questions</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>Is Guru AI ready for internal adoption at Origami, and what guardrails would be
+                    needed for safe use?</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>Can this tool surface Help Center content accurately, or will it mislead
+                    clients with incorrect or fabricated answers?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <h2 class="comparison-section__heading">Method</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>I started by sitting down with Sarah Dantino a Business Process Manager, at
+                    Origami, who was running the pilot, to understand how the tool was configured, what it could
+                    access, and where the guardrails were. Then I tested it myself across multiple sessions, asking
+                    real questions, documenting where it got things wrong, and capturing screenshots of specific
+                    failures. My findings went back to Sarah as part of her ongoing assessment.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>I coordinated and participated in a collaborative evaluation with four members
+                    of the documentation team, running from August 30 to September 13, 2024. Each of us submitted
+                    real questions and rated every response against six criteria: whether it was correct, where the
+                    answer came from, whether it was a hallucination, how well it sourced content, whether the
+                    suggested follow-up questions made sense, and whether it covered the right topics. We tracked
+                    everything in a shared spreadsheet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="artifact">
+        <figure>
+            <img src="command-ai-findings.png"
+                alt="Shared evaluation spreadsheet tracking 49 questions across six criteria" />
+            <figcaption>Shared evaluation spreadsheet tracking 49 questions across six criteria</figcaption>
+        </figure>
+    </section>
+
+    <section class="comparison-section">
+        <h2 class="comparison-section__heading">What we found, sorted by risk category</h2>
+
+        <div class="comparison-category">
+            <h3 class="comparison-category__heading">Hallucinations</h3>
+            <p class="comparison-category__subheading">Found in both tools, with different severity</p>
+        </div>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>Suggested answers sometimes did not match the source card it cited and the AI
+                    appeared to generalize from unrelated content. Other times, the tool returned an answer
+                    referencing terms that never appeared in the cited source. I noted during testing that "If I
+                    didn't check my source, it would be easy to take this as the correct answer." The
+                    false-confidence risk was the most concerning pattern in the Guru AI evaluation: where the
+                    answer sounds authoritative but the cited source doesn't support it.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>51% of evaluated responses (22 of 43) were incorrect. With over half of the
+                    responses returning incorrect information, the most severe answers involved the tool generating
+                    entirely fabricated content for topics not documented in the Help Center, but presenting the
+                    answer with the same confident tone as accurate responses. In one case, the system offered a
+                    suggested follow-up question for content that did not exist, then generated false answers when
+                    the evaluator selected it.</p>
+                <p>A complex question about billing configuration received a response that was "dangerously
+                    incomplete": Steps were omitted while the tool's authoritative tone implied completeness. Also,
+                    if asked the same question three times, the AI produced three different answers with varying
+                    numbers of source links, lowering users' confidence in the tool and causing uncertainty.</p>
+            </div>
+        </div>
+
+        <div class="comparison-category">
+            <h3 class="comparison-category__heading">Accuracy</h3>
+            <p class="comparison-category__subheading">Different failure patterns in each tool</p>
+        </div>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>Accuracy varied and was heavily dependent on the content quality. When the tool
+                    found a matching card, answers were generally useful. A live test by a colleague confirmed that
+                    AI supplied the correct answer faster than it would take asking the same question to a SME and
+                    waiting for response. However, accuracy degraded significantly when the source content was
+                    outdated. This turned out to be a configuration limitation issue since Guru AI searches all
+                    unarchived cards regardless of age, including content from our Evernote migration era that had
+                    never been updated. This meant that old, potentially invalid content was being returned with
+                    the same confidence as current, verified content.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>The AI was 40% correct, 51% incorrect, and 9% not applicable across 43
+                    evaluated questions. The accuracy was the lowest when asking complex or multi-step questions
+                    and highest when asking simple definition questions. One evaluator noted during testing that
+                    "the more generic the question, the more likely Command AI is to be wrong."</p>
+            </div>
+        </div>
+
+        <div class="comparison-category">
+            <h3 class="comparison-category__heading">Sourcing</h3>
+            <p class="comparison-category__subheading">A risk in both tools but for different reasons</p>
+        </div>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>The tool sometimes cited source cards that did not contain the information it
+                    returned, meaning the cited source and the generated answer didn't match. This created a
+                    specific risk: users who didn't manually verify the source would accept incorrect answers as
+                    validated by the tool. After an update, I also discovered that the platform removed the option
+                    for giving "possible sources" when AI found "No direct answer" which greatly reduced users'
+                    ability to find related content when the AI couldn't answer directly.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>The tool consistently drew from sources outside the Help Center, which was the
+                    root cause of most hallucinations. When we asked the vendor directly whether the AI could be
+                    limited to Help Center content only, the answer was no. The sourcing problem was architectural
+                    and not something we could configure around. That made it a serious risk. The tool also linked
+                    to incorrect topics, dropped relevant links entirely, and in one case, linked to a Command AI
+                    website URL that returned a 404 error.</p>
+            </div>
+        </div>
+
+        <div class="comparison-category">
+            <h3 class="comparison-category__heading">Reliability</h3>
+            <p class="comparison-category__subheading">Structural limits in Guru AI, interface failures in Command AI</p>
+        </div>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>Reliability was affected by a manual sync process which refreshed the AI's Slack
+                    knowledge bank. But the knowledge bank was limited to only the last 90 days of Slack history
+                    and the process could take up to six hours. There was also a 25 Slack channel limit, which
+                    meant not all relevant Slack content could be included in searches. Content staleness from
+                    outdated Guru cards was also a persistent concern. The tool returned old and potentially
+                    invalid cards alongside current, validated cards listing them with equal importance. Despite
+                    these limitations, the tool demonstrated sufficient reliability for internal use if we adopt
+                    appropriate user education and maintain content standards.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>Reliability failures were both content-based and UI-based. Responses
+                    disappeared after periods of inactivity, a resize bug made the chat interface unusable until
+                    it was closed and then reopened, and suggested follow-up questions were displayed overtop of
+                    the primary answer when scrolling. Varied answers to the same questions further undermined
+                    trust in the tool as a consistent reference.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <h2 class="comparison-section__heading">Response examples</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <figure>
+                    <img src="Sd-ss.jpg"
+                        alt="Guru AI search results showing a suggested answer about precision and decimal places not found in the cited source" />
+                    <figcaption>Guru AI returned a suggested answer referencing 'precision' and 'decimal places'
+                        — neither term appeared in the cited source card. The source, Core Configuration Best
+                        Practices, contained no information supporting the generated answer. April 25, 2024.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <figure>
+                    <img src="hallucination.jpg"
+                        alt="Command AI generating a confident but entirely incorrect six-point answer about audit methodology" />
+                    <figcaption>Command AI generated a confident six-point answer about audit methodology that
+                        was entirely incorrect. The evaluator noted: 'All displayed information is incorrect. It
+                        should be information from the topic: About Audits.' September 2024.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <h2 class="comparison-section__heading">Findings</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>Guru AI came out as a viable tool for internal use if the right guardrails were in place. We
+                    saw it work well in practice when a colleague found a correct answer through the AI faster than
+                    a SME could respond directly. We would need to implement conditions for safe use, including:
+                    verifying your sources, being aware that older Guru cards may contain outdated information, and
+                    knowing that the tool only searches back 90 days of Slack history. To get the best results out
+                    of Guru AI, outdated Guru cards would need to be archived or updated, and the team would need
+                    to remain committed to maintaining content consistently.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>Command AI was not ready for adoption in the state we evaluated it. The evaluation gave us 49
+                    documented questions with specific failure commentary to back that up. We also identified the
+                    clearest path forward: if the tool could be constrained to use our Help Center as its primary
+                    source, accuracy and reliability would likely improve significantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <h2 class="comparison-section__heading">Outcome</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card comparison-card--guru">
+                <span class="comparison-card__label">Guru AI</span>
+                <p>The Guru AI findings went back to Sarah Dantino as part of her ongoing pilot assessment and
+                    helped inform the conversation about whether to move forward with a broader rollout.</p>
+            </div>
+            <div class="comparison-card comparison-card--command">
+                <span class="comparison-card__label">Command AI</span>
+                <p>The Command AI evaluation provided a documented, evidence-based case for pausing adoption, not
+                    rejecting it outright. The 51% incorrect rate, the sourcing architecture limitation, and the
+                    UI issues were all specific and defensible. More importantly, the evaluation laid out a clear
+                    path forward: constrain the sourcing to Help Center content, resolve the UI reliability issues,
+                    then reconsider.</p>
+            </div>
+        </div>
+    </section>
+</div>

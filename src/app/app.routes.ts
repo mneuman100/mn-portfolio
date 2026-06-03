@@ -4,6 +4,7 @@ import { TacitKnowledgeCaseStudyPage } from './pages/tacit-knowledge-case-study-
 import { ClientSurveyCaseStudyPage } from './pages/client-survey-case-study-page';
 import { ReleaseNotesProcessCaseStudyPage } from './pages/release-notes-process-case-study-page';
 import { Homepage } from './pages/homepage';
+import { HelpCenterCaseStudyPage } from './pages/help-center-case-study-page';
 
 export const routes: Routes = [
     { path: '', component: Homepage, title: 'Meghan Neuman | Portfolio'},
@@ -11,6 +12,5 @@ export const routes: Routes = [
     { path: 'case-study/client-survey', component: ClientSurveyCaseStudyPage, title: 'Meghan Neuman | Client Survey Case Study' },
     { path: 'case-study/release-notes-process', component: ReleaseNotesProcessCaseStudyPage, title: 'Meghan Neuman | Release Notes Process Case Study' },
     { path: 'case-study/ai-tools', component: AiToolsCaseStudyPage, title: 'Meghan Neuman | AI Tools Case Study' },
+    { path: 'case-study/help-center', component: HelpCenterCaseStudyPage, title: 'Meghan Neuman | Help Center Case Study' },
 ];
-
-//TEST COMMENT

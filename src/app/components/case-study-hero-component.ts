@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SkillModel } from '../models/skill-model';
 
 @Component({
   selector: 'app-case-study-hero-component',
@@ -12,5 +13,5 @@ export class CaseStudyHeroComponent {
   @Input() company: string = '';
   @Input() year: string = '';
   @Input() role: string = '';
-  @Input() tags: string[] = [];
+  @Input() tags: SkillModel[] = [];
 }
