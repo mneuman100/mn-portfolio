@@ -201,7 +201,7 @@
             <div class="comparison-card comparison-card--guru">
                 <span class="comparison-card__label">Guru AI</span>
                 <figure>
-                    <img src="Sd-ss.jpg"
+                    <img src="sd-ss.jpg"
                         alt="Guru AI search results showing a suggested answer about precision and decimal places not found in the cited source" />
                     <figcaption>Guru AI returned a suggested answer referencing 'precision' and 'decimal places'
                         — neither term appeared in the cited source card. The source, Core Configuration Best
@@ -263,4 +263,9 @@
             </div>
         </div>
     </section>
+
+    <app-case-study-nav-component
+        [next]="'case-study/help-center'"
+        [prev]="'case-study/release-notes-process'">
+    </app-case-study-nav-component>
 </div>

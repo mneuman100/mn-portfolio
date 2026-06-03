@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SkillColor, SkillModel } from '../models/skill-model';
-import { CaseStudyHeroComponent } from "../components/case-study-hero-component";
+import { CaseStudyHeroComponent } from '../components/case-study-hero-component';
+import { CaseStudyNavComponent } from '../components/case-study-nav-component';
 
 @Component({
   selector: 'app-ai-tools-case-study-page',
-  imports: [CaseStudyHeroComponent],
+  imports: [CaseStudyHeroComponent, CaseStudyNavComponent],
   templateUrl: './ai-tools-case-study-page.html',
   styleUrl: './ai-tools-case-study-page.scss',
 })

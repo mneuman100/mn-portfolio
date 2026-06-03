@@ -1,0 +1,10 @@
+<header class="header">
+  <div (click)="onNavButtonClick('')" class="header__brand">Alex Rivera</div>
+  <nav class="header__nav">
+    @for (item of navItems; track item) {
+      <a [href]="'#' + item.toLowerCase()" class="header__nav-link">
+        {{ item }}
+      </a>
+    }
+  </nav>
+</header>
