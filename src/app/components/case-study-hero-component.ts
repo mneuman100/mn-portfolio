@@ -13,5 +13,4 @@ export class CaseStudyHeroComponent {
   @Input() year: string = '';
   @Input() role: string = '';
   @Input() tags: string[] = [];
-  @Input() summary: string = '';
 }

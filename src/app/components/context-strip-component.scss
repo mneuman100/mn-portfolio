@@ -1,14 +1,20 @@
 .context-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: 1px;
-  background-color: #e2e2e2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.75rem 0;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
 
   .context-item {
-    background: #ffffff;
-    padding: 1.5rem;
+    flex: 1;
+    min-width: 10rem;
+    padding: 0.5rem 2rem;
+    border-left: 1px solid #e2e2e2;
+
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
   }
 
   .context-label {

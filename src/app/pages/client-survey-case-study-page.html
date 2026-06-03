@@ -1,1 +1,55 @@
-<p>client-survey-case-study-page works!</p>
+<div class="client-survey-case-study">
+    <app-case-study-hero-component
+        [title]="'Client Survey and Discovery Interviews'"
+        [subtitle]="'Mixed-methods research that established a baseline and informed the July 2022 Release Notes redesign'"
+        [company]="'Origami Risk'"
+        [year]="'2022'"
+        [tags]="['Survey Design', 'Discovery Interviews', 'Mixed-Methods Research']">
+    </app-case-study-hero-component>
+
+    <section class="paragraph">
+        <h2>Background</h2>
+        <p>At Origami Risk, I designed two client surveys to understand how clients were using the Help Center and
+            whether the Release Notes format was meeting their needs, before the documentation team made changes to
+            either. Survey distribution and interview coordination were handled by our Product Marketing Manager,
+            allowing me to focus on survey design, interview execution, and synthesis.</p>
+    </section>
+
+    <section class="paragraph paragraph--split">
+        <div class="paragraph__body">
+            <h2>Method</h2>
+            <p>Both surveys used skip logic to route participants based on their experience level, producing
+                quantitative response data and open-text feedback across the participants with a combined survey
+                completion rate of 75.2%. To explore themes more deeply, I led five client discovery interviews with
+                volunteer survey participants.</p>
+        </div>
+        <app-quote-block-component
+            [quote]="'[The release notes are] like gold dust.  The single most important thing we get from Origami.'"
+            [attribution]="'Client quote from the Release Notes survey'">
+        </app-quote-block-component>
+    </section>
+
+    <section class="paragraph">
+        <h2>Findings</h2>
+        <p>Most clients were unaware the Help Center existed, and those who used it identified significant content gaps;
+            clients valued the Release Notes but wanted more context about what changed and why.</p>
+    </section>
+
+    <section class="paragraph">
+        <h2>Results</h2>
+        <p>Research findings directly informed the July 2022 Release Notes format redesign and established the priority
+            order for future documentation content sprints. One client volunteered to serve as Beta Testers as a direct
+            result of the engagement.</p>
+    </section>
+
+    <section class="artifact">
+        <figure>
+            <img src="client-survey-chart.png"
+                alt="Client survey ranking of Help Center sections by documentation priority" />
+            <figcaption>
+                Client survey ranking of Help Center sections by documentation priority, used to establish the order
+                for future content sprints. Lower scores indicate higher priority.
+            </figcaption>
+        </figure>
+    </section>
+</div>
