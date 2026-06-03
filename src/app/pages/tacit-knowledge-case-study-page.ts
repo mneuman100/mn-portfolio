@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { CaseStudyHeroComponent } from "../components/case-study-hero-component";
 import { ItemModel } from '../models/item-model';
 import { SkillColor, SkillModel } from '../models/skill-model';
+import { CaseStudyNavComponent } from "../components/case-study-nav-component";
 
 @Component({
   selector: 'app-tacit-knowledge-case-study-page',
-  imports: [CaseStudyHeroComponent],
+  imports: [CaseStudyHeroComponent, CaseStudyNavComponent],
   templateUrl: './tacit-knowledge-case-study-page.html',
   styleUrl: './tacit-knowledge-case-study-page.scss',
 })

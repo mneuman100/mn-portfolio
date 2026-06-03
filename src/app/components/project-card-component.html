@@ -1,0 +1,20 @@
+<div class="card" (click)="onNavButtonClick(project.routerLink)">
+  <div class="card__body">
+    <div class="card__text">
+      <h3 class="card__title">{{ project.title }}</h3>
+      <p class="card__description">{{ project.description }}</p>
+    </div>
+    <div class="card__image-wrapper">
+      <img
+        [src]="project.imageUrl"
+        [alt]="project.title"
+        class="card__image"
+      />
+    </div>
+  </div>
+  <div class="card__tags">
+    @for (tag of project.tags; track tag.label) {
+      <span [class]="getTagClass(tag.color)">{{ tag.label }}</span>
+    }
+  </div>
+</div>

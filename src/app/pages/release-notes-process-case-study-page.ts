@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CaseStudyHeroComponent } from "../components/case-study-hero-component";
 import { SkillColor, SkillModel } from '../models/skill-model';
+import { CaseStudyNavComponent } from "../components/case-study-nav-component";
 
 @Component({
   selector: 'app-release-notes-process-case-study-page',
-  imports: [CaseStudyHeroComponent],
+  imports: [CaseStudyHeroComponent, CaseStudyNavComponent],
   templateUrl: './release-notes-process-case-study-page.html',
   styleUrl: './release-notes-process-case-study-page.scss',
 })

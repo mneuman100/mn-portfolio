@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { QuoteBlockComponent } from "../components/quote-block-component";
 import { CaseStudyHeroComponent } from "../components/case-study-hero-component";
 import { SkillColor, SkillModel } from '../models/skill-model';
+import { CaseStudyNavComponent } from "../components/case-study-nav-component";
 
 @Component({
   selector: 'app-client-survey-case-study-page',
-  imports: [QuoteBlockComponent, CaseStudyHeroComponent],
+  imports: [QuoteBlockComponent, CaseStudyHeroComponent, CaseStudyNavComponent],
   templateUrl: './client-survey-case-study-page.html',
   styleUrl: './client-survey-case-study-page.scss',
 })
