@@ -1,13 +1,12 @@
 .home {
   --home-bg: #FAFAF7;
-  --home-text: #1A1A1A;
 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--home-bg);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--home-text);
+  color: var(--text-primary);
 }
 
 .hero {

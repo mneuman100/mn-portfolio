@@ -1,0 +1,112 @@
+<main class="about">
+  <div class="about__container">
+
+    <div class="about__timeline-line"></div>
+
+    <section class="about__section about__section--hero">
+      <div class="about__dot"></div>
+
+      <div class="hero">
+        <div class="hero__image-wrapper">
+          <div class="hero__halo hero__halo--gold"></div>
+          <div class="hero__halo hero__halo--coral"></div>
+          <img
+            src="pfp.jpg"
+            alt="Meghan"
+            class="hero__image"
+          />
+        </div>
+
+        <span class="hero__label">About me</span>
+
+        <h1 class="hero__heading">
+          Designing with empathy,<br />
+          <span class="hero__heading-accent">
+            building with purpose
+            <svg class="hero__underline" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="transparent" />
+            </svg>
+          </span>
+        </h1>
+
+        <div class="hero__bio">
+          <p>I love digging into a problem to find all the possibilities, as well as learning about people's experiences 
+            and what drives their decisions.  That curiosity doesn't stay in the research. My mind sometimes runs ahead 
+            of the conversation, so if you ask me a question and I take a beat too long to answer, I'm probably already 
+            three steps down the line thinking about what gets affected by each possible path before I give you my answer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about__section" appFadeInView>
+      <div class="about__dot"></div>
+
+      <h2 class="about__heading">Let's get closer <span aria-hidden="true"></span></h2>
+
+      <blockquote class="closer__quote">
+        "I enjoy learning about other cultures and frequently watch shows from different countries. 
+        Let's just say, subtitles were a game-changer. I also love listening to audiobooks, going for 
+        hikes, and lately I started my journey in watercolor. I typically mix my PC work with hands-on 
+        activities like gardening, puzzles, embroidery, and drawing. I have two crazy cats and love watching 
+        the birds that frequent my bird feeder."
+      </blockquote>
+    </section>
+
+    <section class="about__section" appFadeInView>
+      <div class="about__dot"></div>
+
+      <h2 class="about__heading">Testimonials</h2>
+
+      <div class="recs">
+        <div class="recs__card">
+          <p class="recs__quote">"{{ recommendations[currentIndex].quote }}"</p>
+
+          <div class="recs__footer">
+            <div class="recs__author">
+              <img
+                [src]="recommendations[currentIndex].avatar"
+                [alt]="recommendations[currentIndex].name"
+                class="recs__avatar"
+              />
+              <div>
+                <div class="recs__name">{{ recommendations[currentIndex].name }}</div>
+                <div class="recs__role">{{ recommendations[currentIndex].role }}</div>
+              </div>
+            </div>
+            <div class="recs__tags">
+              @for (tag of recommendations[currentIndex].tags; track tag) {
+                <span [class]="getTagClass(tag)">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="recs__controls">
+          <div class="recs__nav">
+            <button class="recs__nav-btn" (click)="prev()" aria-label="Previous recommendation">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="recs__nav-btn" (click)="next()" aria-label="Next recommendation">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="recs__dots">
+            @for (rec of recommendations; track rec.id; let i = $index) {
+              <button
+                class="recs__dot"
+                [class.recs__dot--active]="i === currentIndex"
+                (click)="goTo(i)"
+                [attr.aria-label]="'Go to recommendation ' + (i + 1)"
+              ></button>
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>

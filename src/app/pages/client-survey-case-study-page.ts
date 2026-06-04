@@ -18,7 +18,6 @@ export class ClientSurveyCaseStudyPage {
     { skill: 'Discovery Research',             color: SkillColor.Blue   },
     { skill: 'Mixed-Methods Research',         color: SkillColor.Blue   },
     { skill: 'Insight Synthesis',              color: SkillColor.Green  },
-    { skill: 'Participant Recruitment',        color: SkillColor.Green  },
     { skill: 'Research Reporting',             color: SkillColor.Purple },
     { skill: 'Cross-functional Collaboration', color: SkillColor.Green  },
   ];

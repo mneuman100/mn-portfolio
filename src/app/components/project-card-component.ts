@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { Project, TagColor } from '../models/project-model';
+import { Project } from '../models/project-model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ export class ProjectCardComponent {
 
   private router = inject(Router);
 
-  getTagClass(color: TagColor): string {
+  getTagClass(color: string): string {
     return `card__tag card__tag--${color}`;
   }
 

@@ -12,7 +12,6 @@ import { CaseStudyNavComponent } from '../components/case-study-nav-component';
 export class AiToolsCaseStudyPage {
   skills: SkillModel[] = [
     { skill: 'Usability Evaluation',           color: SkillColor.Blue   },
-    { skill: 'Heuristic Evaluation',           color: SkillColor.Blue   },
     { skill: 'Qualitative Research',           color: SkillColor.Blue   },
     { skill: 'Structured Testing',             color: SkillColor.Blue   },
     { skill: 'Stakeholder Interviews',         color: SkillColor.Green  },
