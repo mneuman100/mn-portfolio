@@ -1,9 +1,10 @@
 <div class="client-survey-case-study">
     <app-case-study-hero-component
-        [title]="'Client Survey and Discovery Interviews'"
+        [title]="'Client Survey and Discovery Research'"
         [subtitle]="'Mixed-methods research that established a baseline and informed the July 2022 Release Notes redesign'"
         [company]="'Origami Risk'"
         [year]="'2022'"
+        [summary]="'Clients were unaware the Help Center existed and the Release Notes format was not meeting their needs. Designed two survey instruments with skip logic, achieved a 75.2% completion rate, and led five client discovery interviews. Synthesized findings into a leadership report that directly informed the July 2022 Release Notes format redesign.'"
         [tags]="skills">
     </app-case-study-hero-component>
 
@@ -16,29 +17,30 @@
     </section>
 
     <section class="paragraph paragraph--split">
-        <div class="paragraph__body">
-            <h2>Method</h2>
-            <p>Both surveys used skip logic to route participants based on their experience level, producing
-                quantitative response data and open-text feedback across the participants with a combined survey
-                completion rate of 75.2%. To explore themes more deeply, I led five client discovery interviews with
-                volunteer survey participants.</p>
-        </div>
-        <app-quote-block-component
-            [quote]="'[The release notes are] like gold dust.  The single most important thing we get from Origami.'"
-            [attribution]="'Client quote from the Release Notes survey'">
-        </app-quote-block-component>
+        <h2>Method</h2>
+        <p>Both surveys used skip logic to route participants based on whether they interacted with the Help Center or release notes, producing
+                    quantitative response data and open-text feedback across the participants. The combined survey
+                    completion rate was 75.2%. To explore themes more deeply, I led five client discovery interviews with
+                    volunteer survey participants.</p>
     </section>
 
     <section class="paragraph">
         <h2>Findings</h2>
-        <p>Most clients were unaware the Help Center existed, and those who used it identified significant content gaps;
+        <div class="findings-inner">
+            <p>Most clients were unaware the Help Center existed, and those who used it identified significant content gaps;
             clients valued the Release Notes but wanted more context about what changed and why.</p>
+
+            <app-quote-block-component
+                [quote]="'[The release notes are] like gold dust.  The single most important thing we get from Origami.'"
+                [attribution]="'Client quote from the Release Notes survey.'">
+            </app-quote-block-component>
+        </div>
     </section>
 
     <section class="paragraph">
         <h2>Results</h2>
         <p>Research findings directly informed the July 2022 Release Notes format redesign and established the priority
-            order for future documentation content sprints. One client volunteered to serve as Beta Testers as a direct
+            order for future documentation sprints. One client volunteered their team to serve as beta testers as a direct
             result of the engagement.</p>
     </section>
 

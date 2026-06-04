@@ -4,6 +4,7 @@
         [subtitle]="'Structured usability evaluation of two AI tools that prevented premature adoption'"
         [company]="'Origami Risk'"
         [year]="'2024'"
+        [summary]="'Two AI tools were under consideration for adoption — Guru AI for internal use and Command AI for client-facing deployment. Independently evaluated Guru AI alongside the internal pilot, documenting sourcing mismatches and reliability limitations. Participated in a structured team evaluation of Command AI across 49 questions and six criteria. Combined findings prevented premature client-facing deployment of Command AI and established guardrails for safe internal adoption of Guru AI.'"
         [tags]="skills">
     </app-case-study-hero-component>
 
@@ -38,6 +39,28 @@
             <span class="tool-display__label">Client-facing tool</span>
         </div>
     </div>
+    
+    <p class="tip"><svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        width="1rem"
+        height="1rem"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+    <path d="M32 10c-9.9 0-18 8.1-18 18 0 6.2 3.1 11.6 7.8 14.9 2.1 1.5 3.2 3.6 3.2 6.1V50h14v-1c0-2.5 1.1-4.6 3.2-6.1C46.9 39.6 50 34.2 50 28c0-9.9-8.1-18-18-18z"/>
+    <path d="M26 34l6 6 6-6"/>
+    <path d="M28 42h8"/>
+    <path d="M24 50h16"/>
+    <path d="M25 55h14"/>
+    <path d="M27 60h10"/>
+    <path d="M32 2v6"/>
+    <path d="M12 12l4 4"/>
+    <path d="M52 12l-4 4"/>
+    <path d="M4 28h6"/>
+    <path d="M54 28h6"/>
+</svg> For enhanced readability, read each column in its entirety before proceeding to the next.</p>
 
     <section class="comparison-section">
         <h2 class="comparison-section__heading">Research questions</h2>
@@ -111,7 +134,7 @@
                     answer with the same confident tone as accurate responses. In one case, the system offered a
                     suggested follow-up question for content that did not exist, then generated false answers when
                     the evaluator selected it.</p>
-                <p>A complex question about billing configuration received a response that was "dangerously
+                <p>A complex question about billing configuration received a response that an evaluator noted was "dangerously
                     incomplete": Steps were omitted while the tool's authoritative tone implied completeness. Also,
                     if asked the same question three times, the AI produced three different answers with varying
                     numbers of source links, lowering users' confidence in the tool and causing uncertainty.</p>
@@ -201,7 +224,7 @@
             <div class="comparison-card comparison-card--guru">
                 <span class="comparison-card__label">Guru AI</span>
                 <figure>
-                    <img src="sd-ss.jpg"
+                    <img src="image-no-work.png"
                         alt="Guru AI search results showing a suggested answer about precision and decimal places not found in the cited source" />
                     <figcaption>Guru AI returned a suggested answer referencing 'precision' and 'decimal places'
                         — neither term appeared in the cited source card. The source, Core Configuration Best

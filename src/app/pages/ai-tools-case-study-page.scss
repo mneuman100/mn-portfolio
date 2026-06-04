@@ -40,7 +40,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid rgba(69, 69, 69, 0.2);
@@ -218,17 +218,13 @@
   }
 
   .artifact {
-    margin-top: 4.5rem;
-    padding-top: 4rem;
-    border-top: 1px solid rgba(69, 69, 69, 0.12);
 
     figure {
       margin: 0;
-      background-color: #f4f5f7;
       border-radius: 0.75rem;
-      border: 1px solid rgba(0, 0, 0, 0.07);
-      box-shadow: 0 16px 56px rgba(94, 110, 255, 0.1), 0 4px 16px rgba(0, 0, 0, 0.06);
-      padding: 2.5rem 3rem;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
 
       img {
         display: block;
@@ -247,6 +243,12 @@
         font-style: italic;
       }
     }
+  }
+
+  .tip {
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 2rem;
   }
 
   @media (max-width: 48rem) {

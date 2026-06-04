@@ -1,10 +1,11 @@
 <header class="header">
-  <div (click)="onNavButtonClick('')" class="header__brand">Alex Rivera</div>
+  <div (click)="onNavButtonClick('')" class="header__brand">Meghan Neuman</div>
   <nav class="header__nav">
-    @for (item of navItems; track item) {
-      <a [href]="'#' + item.toLowerCase()" class="header__nav-link">
-        {{ item }}
-      </a>
-    }
+    <a (click)="onWorkClick()" class="header__nav-link">Work</a>
+    <a (click)="onNavButtonClick('resume')" class="header__nav-link">Resume</a>
+    <a (click)="onNavButtonClick('about')" class="header__nav-link">About</a>
+    <a (click)="onTestimonialsClick()" class="header__nav-link">Testimonials</a>
+    <a href="mailto:iamMeghanNeuman@gmail.com" class="header__nav-link">Contact Me</a>
+    <a href="https://www.linkedin.com/in/iammeghanneuman/" rel="noopener noreferrer" target="blank" class="header__nav-link">LinkedIn</a>
   </nav>
-</header>
+</header> 

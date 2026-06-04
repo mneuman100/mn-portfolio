@@ -13,5 +13,6 @@ export class CaseStudyHeroComponent {
   @Input() company: string = '';
   @Input() year: string = '';
   @Input() role: string = '';
+  @Input() summary: string | null = null;
   @Input() tags: SkillModel[] = [];
 }

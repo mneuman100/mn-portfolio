@@ -4,12 +4,13 @@
         [subtitle]="'Workflow analysis and retrospective facilitation that reduced missed deadlines from 29.3% to 21.6%'"
         [company]="'Origami Risk'"
         [year]="'2022-2023'"
+        [summary]="'TPMs were missing documentation deadlines but the root cause was unknown. Built a ticket tracking system across a full release cycle, facilitated a Start/Stop/Continue retrospective with TPMs, and synthesized findings using HMW questions and problem statements. Redesigned the process with dashboard widgets and calendar integrations, reducing missed deadlines from 29.3% to 21.6%.'"
         [tags]="skills">
     </app-case-study-hero-component>
 
     <section class="paragraph">
         <h2>Observation</h2>
-        <p>Technical product managers (TPMs) were missing SME information deadlines on tickets, especially in
+        <p>At Origami Risk, Technical Product Managers (TPMs) were missing Subject Matter Expert (SME) information deadlines on tickets, especially in
             the last sprints of a release, which left the technical writer scrambling to finish their release
             notes by the documentation deadlines.</p>
     </section>
@@ -20,76 +21,27 @@
             <p>I built a ticket tracking spreadsheet across a full release cycle to identify where deadline
                 failures were occurring. Through retrospective sessions with TPMs, I discovered the
                 documentation timeline was out of sync with development sprint cycles and deadline information
-                wasn't visible in the tools TPMs used daily.</p>
+                wasn't visible in the tools TPMs used daily. Using "How Might We" (HMW) questions, I synthesized these findings into four problem
+                statements.</p>
         </div>
         <figure class="paragraph__figure">
             <img src="retrospective-board.png"
-                alt="Start/Stop/Continue retrospective board facilitated with TPMs" />
+                alt="Start/Stop/Continue retrospective board"/>
             <figcaption>
-                Start/Stop/Continue retrospective facilitated with TPMs where we surfaced workflow gaps and
-                gathered stakeholder feedback on the documentation process.
+                Start/Stop/Continue retrospective where we surfaced workflow gaps and
+                gathered stakeholder feedback.
             </figcaption>
         </figure>
     </section>
 
-    <section class="paragraph">
-        <p class="lead">Using "How Might We" (HMW) questions, I synthesized these findings into four problem
-            statements.</p>
-    </section>
-
-    <section class="artifact artifact--document">
-        <div class="document-block">
-            <h3>"How Might We" questions</h3>
-            <ol>
-                <li>How Might We increase awareness of SME information deadlines?</li>
-                <li>HMW increase awareness of tickets that need SME information?</li>
-                <li>HMW make it easier for TPMs to complete tickets before the deadline?</li>
-                <li>HMW ensure the technical writer has what they need, even when tickets are incomplete?</li>
-                <li>HMW help the TW identify at-risk tickets early enough to follow up before the deadline?</li>
-                <li>HMW make the documentation deadline visible to everyone involved in the sprint?</li>
-            </ol>
-            <h4>Scoped out and why</h4>
-            <ol>
-                <li>
-                    HMW increase the ease of TPMS adding SME information to the ticket?
-                    <ul>
-                        <li>Duplicate of another, which is worded better</li>
-                    </ul>
-                </li>
-                <li>
-                    HMW help SMEs determine the right information needed by the TW?
-                    <ul>
-                        <li>may be out of scope</li>
-                    </ul>
-                </li>
-                <li>
-                    HMW find ways to help the SME mark the ticket earlier in the sprint cycle?
-                    <ul>
-                        <li>Out of scope</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
+    <section class="artifact artifact--document flex-center">
+        <img src="HMW.png"/>
         <p class="artifact__caption">Using HMW questions, I brainstormed broad, open-ended opportunities,
             then crossed out ones that were out of scope.</p>
     </section>
 
-    <section class="artifact artifact--document">
-        <div class="document-block">
-            <h3>Problem statements</h3>
-            <ol>
-                <li>Flora, a product manager, needs a way to keep track of tickets that need SME information
-                    because she keeps missing tickets toward the end of the release.</li>
-                <li>Flora, a product manager, needs to know exactly what information is required on each
-                    ticket before the sprint ends because incomplete tickets can't be processed, causing
-                    downstream delays for the technical writer.</li>
-                <li>Sam, a technical writer, needs a way to identify at-risk tickets early because late SME
-                    information forces last-minute scrambling that threatens documentation deadlines.</li>
-                <li>Flora, a product manager, and Sam, a technical writer, need documentation deadlines to
-                    be visible within their existing sprint workflow because deadline information currently
-                    lives outside the tools both use daily.</li>
-            </ol>
-        </div>
+    <section class="artifact artifact--document flex-center">
+        <img src="problem-statement.png"/>
         <p class="artifact__caption">Using the HMW questions, I defined the key user roles and narrowed
             down my problem statements to these four:</p>
     </section>
@@ -104,7 +56,7 @@
         <h2>Results</h2>
         <p>By adding widgets that showed what tickets needed TPM assistance on the existing technical writer
             dashboard, TPMs could now quickly see the status of their tickets.</p>
-        <p>By adjusting the documentation deadlines to be in sync with the pre-prod release schedule and
+        <p>By adjusting the documentation deadlines to be in sync with the pre-production release schedule and
             requesting the dates get added to the release calendar, TPMs could now clearly see the deadline
             on their work calendars.  Both solutions lead to less friction for release note completion and a
             reduction in tickets missing their documentation deadline from 29.3% to 21.6% in the very next
@@ -136,8 +88,11 @@
                 Meghan did all of that here, and she did it without formal authority over any of the people
                 involved." - Jon Shulz</p>
         </blockquote>
-        <p class="attribution">Jon Shulz was a Product Manager at Origami Risk who worked directly with the
+        <div class="attribution">
+            <!--PLACEHOLDER-->
+            <p class="attribution">Jon Shulz was a Product Manager at Origami Risk who worked directly with the
             TPM team affected by this process redesign</p>
+        </div>
         <a href="https://www.linkedin.com/in/iammeghanneuman/" target="_blank" rel="noopener noreferrer" class="recommendation-link">[See his full recommendation]</a>
     </section>
 

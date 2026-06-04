@@ -1,45 +1,35 @@
 <div class="home">
-  <main class="home__main">
+    <main class="home__main">
 
-    <section class="hero">
-      <div class="hero__image-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800&h=800"
-          alt="Alex Rivera - UX Researcher"
-          class="hero__image"
-        />
-      </div>
-      <div class="hero__content">
-        <h1 class="hero__heading">
-          Hi, I'm Alex. I'm a Senior UX Researcher who turns complex human
-          behaviors into clear, actionable product strategies.
-        </h1>
-        <p class="hero__subheading">
-          Currently leading discovery at Acme Corp. I specialize in foundational
-          research, usability testing, and helping teams build with empathy and
-          confidence.
-        </p>
-      </div>
-    </section>
+        <section class="hero">
+            <div class="hero__image-wrapper">
+                <img src="pfp.jpg"
+                    alt="Meghan Neuman - UX Researcher" class="hero__image" />
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__heading">
+                    Technical writing brought me to UX research, and once I arrived, it felt 
+                    less like a career change and more like putting a name to something I'd 
+                    been doing all along. 
+                </h1>
+                <!--<p class="hero__subheading">
+                    
+                </p>-->
+            </div>
+        </section>
 
-    <section id="work" class="work">
-      <div class="work__header">
-        <p class="work__eyebrow">Selected Work</p>
-        <h2 class="work__heading">Case Studies</h2>
-      </div>
-      <div class="work__grid">
-        @for (project of projects; track project.title; let i = $index) {
-          <app-project-card
-            appFadeInView
-            [project]="project"
-            [index]="i"
-            [style.transition-delay]="(i * 0.1) + 's'"
-          />
-        }
-        <div class="work__grid-spacer"></div>
-      </div>
-    </section>
-
-  </main>
-
+        <section #workSection id="work" class="work">
+            <div class="work__header">
+                <p class="work__eyebrow">Selected Work</p>
+                <h2 class="work__heading">Case Studies</h2>
+            </div>
+            <div class="work__grid">
+                @for (project of projects; track project.title; let i = $index) {
+                <app-project-card appFadeInView [project]="project" [index]="i"
+                    [style.transition-delay]="(i * 0.1) + 's'" />
+                }
+                <div class="work__grid-spacer"></div>
+            </div>
+        </section>
+    </main>
 </div>

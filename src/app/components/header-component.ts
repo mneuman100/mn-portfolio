@@ -9,12 +9,29 @@ import { Router } from '@angular/router';
   styleUrl: './header-component.scss',
 })
 export class HeaderComponent {
-  readonly navItems = ['Work', 'Resume', 'About', 'Contact'];
-
   private router = inject(Router);
 
-  onNavButtonClick(page: string) {
-    this.router.navigate([page]);
-    window.scrollTo({top: 0, behavior: 'smooth'});
+  onWorkClick(): void {
+    if (this.router.url === '/') {
+      document.getElementById('work')!.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this.router.navigate([''], { queryParams: { work: 'true' } });
+    }
+  }
+
+  onTestimonialsClick(): void {
+    if (this.router.url === '/about') {
+      document.getElementById('testimonials')!.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/about'], { queryParams: { work: 'true' } });
+    }
+  }
+
+   onNavButtonClick(page: string, queryParams?: Record<string, string>) {
+    this.router.navigate([page], queryParams ? { queryParams } : {});
+
+    if (!queryParams) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 }

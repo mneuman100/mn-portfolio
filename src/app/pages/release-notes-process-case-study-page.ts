@@ -19,7 +19,6 @@ export class ReleaseNotesProcessCaseStudyPage {
     { skill: 'Retrospective Facilitation',     color: SkillColor.Green  },
     { skill: 'Data Analysis',                  color: SkillColor.Blue   },
     { skill: 'Insight Synthesis',              color: SkillColor.Green  },
-    { skill: 'Dashboard and Artifact Creation',color: SkillColor.Purple },
     { skill: 'Cross-functional Collaboration', color: SkillColor.Green  },
   ];
 }
