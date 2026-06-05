@@ -11,14 +11,14 @@ import { CaseStudyNavComponent } from "../components/case-study-nav-component";
 })
 export class ReleaseNotesProcessCaseStudyPage {
   skills: SkillModel[] = [
-    { skill: 'Workflow Analysis',              color: SkillColor.Blue   },
-    { skill: 'Stakeholder Interviews',         color: SkillColor.Green  },
-    { skill: 'Qualitative Research',           color: SkillColor.Blue   },
-    { skill: 'Problem Framing',                color: SkillColor.Purple },
+    { skill: 'Workflow Analysis',              color: SkillColor.Green   },
+    { skill: 'Stakeholder Interviews',         color: SkillColor.Gold  },
+    { skill: 'Qualitative Research',           color: SkillColor.Primary   },
+    { skill: 'Problem Framing',                color: SkillColor.Primary },
     { skill: 'How Might We Facilitation',      color: SkillColor.Green  },
     { skill: 'Retrospective Facilitation',     color: SkillColor.Green  },
-    { skill: 'Data Analysis',                  color: SkillColor.Blue   },
-    { skill: 'Insight Synthesis',              color: SkillColor.Green  },
-    { skill: 'Cross-functional Collaboration', color: SkillColor.Green  },
+    { skill: 'Data Analysis',                  color: SkillColor.Primary   },
+    { skill: 'Insight Synthesis',              color: SkillColor.Primary  },
+    { skill: 'Cross-functional Collaboration', color: SkillColor.Gold  },
   ];
 }

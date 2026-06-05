@@ -1,0 +1,337 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --purple-deep: #4a2d7a;
+  --purple-mid: #7c52b8;
+  --purple-light: #e8dff5;
+  --purple-pale: #f5f0fc;
+  --blue-accent: #4a6fa5;
+  --blue-mid: #6b9fd4;
+  --blue-pale: #e8f0fb;
+  --gradient: linear-gradient(90deg, #6a9fd4 0%, #7c6cb8 40%, #9b7ec8 70%, #7c52b8 100%);
+  --ink: #1a1a2e;
+  --mid: #4a4a6a;
+  --light: #8080a0;
+  --rule: #c8b8e8;
+  --rule-main: #d4e2f4;
+  --bg: #faf9fd;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 0.7917rem;
+  line-height: 1.55;
+}
+
+.page {
+  width: 8.5in;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 4px 40px rgba(74,45,122,0.1);
+}
+
+/* HEADER - full width editorial strip */
+.header {
+  background: var(--white);
+  border-top: none;
+  position: relative;
+  padding: 1.5rem 3rem 1.25rem 3rem;
+  display: grid;
+  grid-template-columns: 2.4in 1fr;
+  gap: 2.4rem;
+  align-items: center;
+  border-bottom: 1px solid var(--purple-light);
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: var(--gradient);
+  border-radius: 0;
+  z-index: 1;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6667rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4a6fa5 0%, #4a2d7a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.05;
+  letter-spacing: -0.0625rem;
+}
+
+.title-tag {
+  margin-top: 0.375rem;
+  font-size: 0.5833rem;
+  font-weight: 600;
+  letter-spacing: 0.1875rem;
+  text-transform: uppercase;
+  color: var(--blue-accent);
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  padding-left: 2.4rem;
+  margin-left: 0.125rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.header-right::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.125rem;
+  background: linear-gradient(180deg, #4a6fa5 0%, #7c52b8 100%);
+}
+
+.summary-head {
+  font-size: 0.7333rem;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.65;
+}
+
+.summary-proof {
+  font-size: 0.6833rem;
+  font-weight: 400;
+  color: var(--light);
+  line-height: 1.55;
+  letter-spacing: 0.0063rem;
+}
+
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1875rem;
+  margin-top: 0.25rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.contact-row span {
+  font-size: 0.5417rem;
+  color: var(--light);
+  letter-spacing: 0.0125rem;
+  white-space: nowrap;
+}
+
+.contact-row span + span::before {
+  content: '·';
+  margin-right: 0.5rem;
+  color: var(--rule);
+}
+
+/* BODY layout */
+.body-grid {
+  display: grid;
+  grid-template-columns: 2.4in 1fr;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: var(--purple-pale);
+  padding: 1rem 1.5rem;
+  border-right: 1px solid var(--purple-light);
+}
+
+.sidebar-section { margin-bottom: 0.875rem; }
+
+.sidebar-heading {
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.175rem;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--rule);
+}
+
+.impact-item {
+  margin-bottom: 0.375rem;
+  padding: 0.3rem 0.5rem;
+  background: var(--white);
+  border-radius: 4px;
+  border-left: 3px solid var(--blue-mid);
+}
+
+.impact-stat {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-accent);
+  line-height: 1;
+}
+
+.impact-desc {
+  font-size: 0.625rem;
+  color: var(--mid);
+  line-height: 1.4;
+  margin-top: 0.1875rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.skill-tag {
+  font-size: 0.5667rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  color: var(--purple-mid);
+  padding: 0.125rem 0.4375rem;
+  border-radius: 20px;
+  line-height: 1.6;
+}
+
+.tools-list {
+  font-size: 0.65rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.edu-school {
+  font-weight: 600;
+  font-size: 0.7083rem;
+  color: var(--ink);
+}
+
+.edu-degree {
+  font-size: 0.625rem;
+  color: var(--mid);
+  margin-top: 0.125rem;
+}
+
+/* MAIN */
+.main {
+  padding: 1.5rem 2.25rem 1.5rem 2rem;
+}
+
+.section { margin-bottom: 1.25rem; }
+
+.section-heading {
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.175rem;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--rule-main);
+}
+
+.job { margin-bottom: 0.875rem; }
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.0625rem;
+}
+
+.job-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9167rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.job-dates {
+  font-size: 0.625rem;
+  color: var(--light);
+  white-space: nowrap;
+}
+
+.job-company {
+  font-size: 0.5833rem;
+  font-weight: 600;
+  letter-spacing: 0.1125rem;
+  text-transform: uppercase;
+  color: var(--blue-accent);
+  margin-bottom: 0.4375rem;
+}
+
+.job ul {
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+.job li {
+  position: relative;
+  padding-left: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.7333rem;
+  color: var(--mid);
+  line-height: 1.45;
+}
+
+.job li::before {
+  content: '';
+  position: absolute;
+  left: 0.0625rem;
+  top: 0.375rem;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: var(--blue-mid);
+}
+
+.job li b {
+  color: var(--blue-accent);
+  font-weight: 500;
+}
+
+.additional {
+  font-size: 0.65rem;
+  color: var(--mid);
+  line-height: 1.85;
+}
+
+.additional strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media print {
+  body { background: #fff; font-weight: 400; }
+  .page { box-shadow: none; min-height: 11in; }
+  .name {
+    -webkit-text-fill-color: var(--purple-deep);
+    background: none;
+  }
+  .job li { font-weight: 400; }
+  .sidebar { border-right: 2px solid var(--purple-mid); }
+  .header { border-top: 8px solid #5a6fa5; }
+  .header::before { display: none; }
+}

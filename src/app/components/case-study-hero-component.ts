@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SkillModel } from '../models/skill-model';
+import { SkillColor, SkillModel } from '../models/skill-model';
 
 @Component({
   selector: 'app-case-study-hero-component',
@@ -15,4 +15,14 @@ export class CaseStudyHeroComponent {
   @Input() role: string = '';
   @Input() summary: string | null = null;
   @Input() tags: SkillModel[] = [];
+
+  getTagClass(color: SkillColor): string {
+    const map: Record<SkillColor, string> = {
+      [SkillColor.Green]: 'tag-chip--green',
+      [SkillColor.Primary]: 'tag-chip--blue',
+      [SkillColor.Secondary]: 'tag-chip--purple',
+      [SkillColor.Gold]: 'tag-chip--gold',
+    };
+    return map[color] ?? '';
+  }
 }

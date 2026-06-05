@@ -84,6 +84,22 @@
         }
     }
 
+    .quote {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 30%;
+            border-radius: 1rem;
+        }
+
+        p {
+            color: var(--text-secondary);
+        }
+    }
+
     .findings-inner {
         display: flex;
         gap: 2rem;

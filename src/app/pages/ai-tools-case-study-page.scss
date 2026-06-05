@@ -251,6 +251,17 @@
     margin: 2rem;
   }
 
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .command-image {
+    width: 50%;
+  }
+
   @media (max-width: 48rem) {
     padding: 3rem 1.25rem 4rem;
 

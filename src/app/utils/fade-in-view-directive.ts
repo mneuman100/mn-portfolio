@@ -1,13 +1,17 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Directive, ElementRef, inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 @Directive({
   selector: '[appFadeInView]',
   standalone: true,
 })
 export class FadeInViewDirective implements OnInit {
-  constructor(private el: ElementRef) {}
+  private el = inject(ElementRef);
+  private platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

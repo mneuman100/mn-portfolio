@@ -26,7 +26,6 @@ interface SkillGroup {
 export class AboutPage implements OnInit, OnDestroy {
   private autoPlayInterval?: ReturnType<typeof setInterval>;
   private router = inject(Router);
-  private location = inject(Location);
 
   @ViewChild('recs') recs!: ElementRef<HTMLElement>;
 
@@ -54,7 +53,7 @@ export class AboutPage implements OnInit, OnDestroy {
       quote: 'I’ve worked with a lot of people who can identify a problem. Fewer can take it from observation to data to stakeholder alignment to something that actually gets built and used. Meghan did all of that without formal authority over any of the people involved. If you’re looking for a UX researcher who can find the real problem under the surface problem and see it through; Meghan is the real deal.',
       name: 'John Schulz',
       role: 'Senior Market Strategy Lead at Origami Risk',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=64&q=80',
+      avatar: 'JonShulz.jpg',
       tags: [],
     },
     {
@@ -62,15 +61,15 @@ export class AboutPage implements OnInit, OnDestroy {
       quote: 'She is exceptionally detail-oriented. Beyond her core responsibilities, she is highly collaborative and always brings thoughtful suggestions that improve both the product and our processes. Any team would greatly benefit from her expertise, initiative, and commitment to excellence!',
       name: 'Lexi Wagner',
       role: 'Senior Product Manager at Origami Risk',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=64&q=80',
+      avatar: 'LexiWagner.jpg',
       tags: [],
     },
     {
       id: 3,
       quote: 'Meghan has a sharp eye for detail, deeply considers the customer experience, and actively advocates for what users need.  She is also an exceptional collaborator, partnering seamlessly with product managers and engineers to ensure alignment and quality across the board. Meghan is a valued team member and someone I highly recommend.',
       name: 'Jamie Roddy',
-      role: 'Manager of Technical Communications at Origami Risk',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=64&q=80',
+      role: 'Product Documentation Manager at Origami Risk',
+      avatar: 'JamieRoddy.png',
       tags: [],
     },
   ];
@@ -82,7 +81,6 @@ export class AboutPage implements OnInit, OnDestroy {
       setTimeout(() => {
         this.recs.nativeElement.scrollIntoView({ behavior: 'smooth' });
       }, 0);
-      //this.location.replaceState('/');
     }
   }
 

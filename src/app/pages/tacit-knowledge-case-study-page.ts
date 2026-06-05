@@ -12,13 +12,12 @@ import { CaseStudyNavComponent } from "../components/case-study-nav-component";
 })
 export class TacitKnowledgeCaseStudyPage {
   skills: SkillModel[] = [
-    { skill: 'Contextual Inquiry',          color: SkillColor.Blue   },
-    { skill: 'User Shadowing',              color: SkillColor.Blue   },
-    { skill: 'Workflow Analysis',           color: SkillColor.Blue   },
-    { skill: 'Qualitative Research',        color: SkillColor.Blue   },
-    { skill: 'Observation and Note-taking', color: SkillColor.Blue   },
+    { skill: 'Contextual Inquiry',          color: SkillColor.Green   },
+    { skill: 'User Shadowing',              color: SkillColor.Green   },
+    { skill: 'Workflow Analysis',           color: SkillColor.Green   },
+    { skill: 'Qualitative Research',        color: SkillColor.Primary   },
+    { skill: 'Observation and Note-taking', color: SkillColor.Green   },
     { skill: 'Knowledge Elicitation',       color: SkillColor.Green  },
-    { skill: 'Artifact Creation',           color: SkillColor.Purple },
-    { skill: 'Insight Synthesis',           color: SkillColor.Green  },
+    { skill: 'Insight Synthesis',           color: SkillColor.Primary  },
   ];
 }
