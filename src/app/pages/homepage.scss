@@ -1,149 +1,195 @@
 .home {
-  --home-bg: #FAFAF7;
+    --home-bg: #FAFAF7;
 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--home-bg);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--home-bg);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-primary);
 }
 
 .hero {
-  width: 100%;
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 6rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-
-  @media (min-width: 48rem) {
-    flex-direction: row;
-    padding: 8rem 2rem;
-  }
-
-  &__image-wrapper {
-    width: 16rem;
-    height: 16rem;
-    flex-shrink: 0;
-    border-radius: 9999px;
-    overflow: hidden;
-    border: 4px solid #ffffff;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-    animation: scaleFadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
 
     @media (min-width: 48rem) {
-      width: 20rem;
-      height: 20rem;
+        flex-direction: row;
+        padding: 8rem 2rem;
     }
-  }
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    &__image-wrapper {
+        position: relative;
+        width: 16rem;
+        height: 16rem;
+        flex-shrink: 0;
+        animation: scaleFadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 
-  &__content {
-    flex: 1;
-    max-width: 42rem;
-    animation: fadeSlideRight 0.6s 0.2s ease both;
-  }
+        @media (min-width: 48rem) {
+            width: 20rem;
+            height: 20rem;
+        }
+    }
 
-  &__heading {
-    font-size: clamp(1.75rem, 4vw, 3rem);
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.9);
-    margin: 0;
-  }
+    &__image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 9999px;
+        border: 4px solid #ffffff;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
 
-  &__subheading {
-    margin-top: 1.5rem;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: rgba(0, 0, 0, 0.6);
-    line-height: 1.6;
-    font-weight: 400;
-  }
+    &__content {
+        flex: 1;
+        max-width: 42rem;
+        animation: fadeSlideRight 0.6s 0.2s ease both;
+    }
+
+    &__halo {
+        position: absolute;
+        inset: -1rem;
+        border-radius: 9999px;
+        filter: blur(1.5rem);
+
+        &--gold {
+            background-color: rgba(93, 83, 229, 0.2);
+            transform: translateY(-1rem) translateX(1rem);
+        }
+
+        &--coral {
+            background-color: rgba(107, 86, 224, 0.1);
+            transform: translateY(1rem) translateX(-1rem);
+        }
+    }
+
+    &__heading {
+        font-size: clamp(1.75rem, 4vw, 3rem);
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        color: rgba(0, 0, 0, 0.9);
+        margin: 0;
+    }
+
+    &__subheading {
+        margin-top: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.6;
+        font-weight: 400;
+    }
 }
 
 .work {
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
 
-  &__header {
-    margin-bottom: 4rem;
-  }
-
-  &__eyebrow {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: rgba(0, 0, 0, 0.4);
-    margin: 0 0 0.75rem;
-  }
-
-  &__heading {
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: rgba(0, 0, 0, 0.9);
-    margin: 0;
-  }
-
-  &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-
-  &__grid-spacer {
-    display: none;
-
-    @media (min-width: 64rem) {
-      display: block;
+    &__header {
+        margin-bottom: 4rem;
     }
-  }
+
+    &__eyebrow {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(0, 0, 0, 0.4);
+        margin: 0 0 0.75rem;
+    }
+
+    &__heading {
+        font-size: clamp(1.75rem, 3vw, 2.25rem);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--color-primary);
+        margin: 0;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__grid-spacer {
+        display: none;
+
+        @media (min-width: 64rem) {
+            display: block;
+        }
+    }
+}
+
+.highlight {
+  text-shadow:
+    0 0 1.5rem rgba(93, 83, 229, 0.5),
+    0 0 3rem rgba(93, 83, 229, 0.4),
+    0 0 5rem rgba(93, 83, 229, 0.2);
 }
 
 .work__grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: stretch;
-  justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch;
+    justify-content: flex-start;
 
-  app-project-card {
-    flex: 0 0 calc(33.333% - 1.334rem);
-    min-width: 16rem;
+    app-project-card {
+        flex: 0 0 calc(33.333% - 1.334rem);
+        min-width: 16rem;
 
-    @media (max-width: 64rem) {
-      flex-basis: calc(50% - 1rem);
+        @media (max-width: 64rem) {
+            flex-basis: calc(50% - 1rem);
+        }
+
+        @media (max-width: 48rem) {
+            flex-basis: 100%;
+        }
     }
-
-    @media (max-width: 48rem) {
-      flex-basis: 100%;
-    }
-  }
 }
 
 @keyframes fadeSlideDown {
-  from { opacity: 0; transform: translateY(-0.625rem); }
-  to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-0.625rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeSlideRight {
-  from { opacity: 0; transform: translateX(1.25rem); }
-  to   { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(1.25rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes scaleFadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to   { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

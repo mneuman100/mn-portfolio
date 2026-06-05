@@ -1,11 +1,11 @@
 export class SkillModel {
     skill: string = '';
-    color: SkillColor = SkillColor.Red;
+    color: SkillColor = SkillColor.Green;
 }
 
 export enum SkillColor {
-    Red,
-    Blue,
-    Green,
-    Purple
+    Green = '#2D7A5D',
+    Primary = 'var(--color-primary)',
+    Secondary = 'var(--color-secondary)',
+    Gold = '#bfa409'
 }

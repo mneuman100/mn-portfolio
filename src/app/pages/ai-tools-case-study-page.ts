@@ -11,14 +11,14 @@ import { CaseStudyNavComponent } from '../components/case-study-nav-component';
 })
 export class AiToolsCaseStudyPage {
   skills: SkillModel[] = [
-    { skill: 'Usability Evaluation',           color: SkillColor.Blue   },
-    { skill: 'Qualitative Research',           color: SkillColor.Blue   },
-    { skill: 'Structured Testing',             color: SkillColor.Blue   },
-    { skill: 'Stakeholder Interviews',         color: SkillColor.Green  },
-    { skill: 'Risk Assessment',                color: SkillColor.Purple },
-    { skill: 'Data Analysis',                  color: SkillColor.Blue   },
-    { skill: 'Insight Synthesis',              color: SkillColor.Green  },
-    { skill: 'Research Reporting',             color: SkillColor.Purple },
-    { skill: 'Cross-functional Collaboration', color: SkillColor.Green  },
+    { skill: 'Usability Evaluation',           color: SkillColor.Green   },
+    { skill: 'Qualitative Research',           color: SkillColor.Primary   },
+    { skill: 'Structured Testing',             color: SkillColor.Green   },
+    { skill: 'Stakeholder Interviews',         color: SkillColor.Secondary  },
+    { skill: 'Risk Assessment',                color: SkillColor.Secondary },
+    { skill: 'Data Analysis',                  color: SkillColor.Primary   },
+    { skill: 'Insight Synthesis',              color: SkillColor.Primary  },
+    { skill: 'Research Reporting',             color: SkillColor.Gold },
+    { skill: 'Cross-functional Collaboration', color: SkillColor.Gold  },
   ];
 }

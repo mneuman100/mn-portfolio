@@ -2,26 +2,25 @@ import { Component } from '@angular/core';
 import { CaseStudyHeroComponent } from "../components/case-study-hero-component";
 import { SkillColor, SkillModel } from '../models/skill-model';
 import { CaseStudyNavComponent } from "../components/case-study-nav-component";
-import { ProcessStepsComponent } from "../components/process-steps-component";
 import { ItemModel } from '../models/item-model';
 
 @Component({
   selector: 'app-help-center-case-study-page',
-  imports: [CaseStudyHeroComponent, CaseStudyNavComponent, ProcessStepsComponent],
+  imports: [CaseStudyHeroComponent, CaseStudyNavComponent],
   templateUrl: './help-center-case-study-page.html',
   styleUrl: './help-center-case-study-page.scss',
 })
 export class HelpCenterCaseStudyPage {
   skills: SkillModel[] = [
-    { skill: 'Content Audit',                   color: SkillColor.Blue   },
-    { skill: 'Information Architecture',        color: SkillColor.Purple },
-    { skill: 'Gap Analysis',                    color: SkillColor.Blue   },
-    { skill: 'Stakeholder Interviews',          color: SkillColor.Green  },
-    { skill: 'Qualitative Research',            color: SkillColor.Blue   },
-    { skill: 'Discovery Research',              color: SkillColor.Blue   },
-    { skill: 'Prioritization Frameworks',       color: SkillColor.Purple },
-    { skill: 'Insight Synthesis',               color: SkillColor.Green  },
-    { skill: 'Cross-functional Collaboration',  color: SkillColor.Green  },
+    { skill: 'Content Audit',                   color: SkillColor.Secondary   },
+    { skill: 'Information Architecture',        color: SkillColor.Secondary },
+    { skill: 'Gap Analysis',                    color: SkillColor.Primary   },
+    { skill: 'Stakeholder Interviews',          color: SkillColor.Gold  },
+    { skill: 'Qualitative Research',            color: SkillColor.Primary   },
+    { skill: 'Discovery Research',              color: SkillColor.Green   },
+    { skill: 'Prioritization Frameworks',       color: SkillColor.Secondary },
+    { skill: 'Insight Synthesis',               color: SkillColor.Primary  },
+    { skill: 'Cross-functional Collaboration',  color: SkillColor.Gold  },
   ];
 
   steps: ItemModel[] = [
