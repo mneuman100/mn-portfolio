@@ -23,7 +23,7 @@ export class HeaderComponent {
     if (this.router.url === '/about') {
       document.getElementById('testimonials')!.scrollIntoView({ behavior: 'smooth' });
     } else {
-      this.router.navigate(['/about'], { queryParams: { work: 'true' } });
+      this.router.navigate(['/about'], { queryParams: { testimonials: 'true' } });
     }
   }
 
