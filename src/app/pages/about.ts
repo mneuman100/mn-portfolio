@@ -52,7 +52,7 @@ export class AboutPage implements OnInit, OnDestroy {
       id: 1,
       quote: 'I’ve worked with a lot of people who can identify a problem. Fewer can take it from observation to data to stakeholder alignment to something that actually gets built and used. Meghan did all of that without formal authority over any of the people involved. If you’re looking for a UX researcher who can find the real problem under the surface problem and see it through; Meghan is the real deal.',
       name: 'John Schulz',
-      role: 'Senior Market Strategy Lead at Origami Risk',
+      role: 'Director of Implementation at Fieldguide',
       avatar: 'JonShulz.jpg',
       tags: [],
     },
