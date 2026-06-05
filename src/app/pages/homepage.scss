@@ -18,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    justify-content: center;
 
     @media (min-width: 48rem) {
         flex-direction: row;
@@ -49,7 +50,7 @@
 
     &__content {
         flex: 1;
-        max-width: 42rem;
+        max-width: 60rem;
         animation: fadeSlideRight 0.6s 0.2s ease both;
     }
 
@@ -86,6 +87,14 @@
         line-height: 1.6;
         font-weight: 400;
     }
+}
+
+.heading-upper {
+    margin-bottom: 4rem;
+}
+
+.smaller-font {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
 
 .work {
