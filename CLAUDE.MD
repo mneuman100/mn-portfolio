@@ -1,5 +1,9 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Working with me
+
+I don't read or write code myself. When you're about to run a shell command, explain in plain language what it does and why before running it — don't assume I can interpret the command or its output. If you hit a blocker that requires a decision (e.g., which of two approaches to take, whether to overwrite something, how to resolve a conflict), stop and explain the situation and the options in plain terms rather than picking one and continuing. Assume I can evaluate tradeoffs once they're explained, but not the underlying code or commands.
+
 ## What this is
 
 A static personal portfolio site (Meghan Neuman) built with Angular 21, standalone components, and SSR/prerendering. There is no backend — all content lives in TypeScript source files and is baked into prerendered HTML at build time.
