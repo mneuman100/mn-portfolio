@@ -1,5 +1,5 @@
 export class SkillModel {
-    skill: string = '';
+    skill = '';
     color: SkillColor = SkillColor.Green;
 }
 

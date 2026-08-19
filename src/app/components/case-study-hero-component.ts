@@ -8,11 +8,11 @@ import { SkillColor, SkillModel } from '../models/skill-model';
   styleUrl: './case-study-hero-component.scss',
 })
 export class CaseStudyHeroComponent {
-  @Input() title: string = '';
+  @Input() title = '';
   @Input() subtitle: string | null = null;
-  @Input() company: string = '';
-  @Input() year: string = '';
-  @Input() role: string = '';
+  @Input() company = '';
+  @Input() year = '';
+  @Input() role = '';
   @Input() summary: string | null = null;
   @Input() tags: SkillModel[] = [];
 

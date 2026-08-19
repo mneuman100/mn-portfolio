@@ -1,4 +1,4 @@
-<div class="card" (click)="onNavButtonClick(project.routerLink)">
+<div class="card" (click)="onNavButtonClick(project.routerLink)" (keydown.enter)="onNavButtonClick(project.routerLink)" tabindex="0">
   <div class="card__body">
     <div class="card__text">
       <h3 class="card__title">{{ project.title }}</h3>

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProjectCardComponent {
   @Input() project!: Project;
-  @Input() index: number = 0;
+  @Input() index = 0;
 
   private router = inject(Router);
 

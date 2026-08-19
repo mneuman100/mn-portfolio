@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CaseStudyHeroComponent } from "../components/case-study-hero-component";
-import { ItemModel } from '../models/item-model';
 import { SkillColor, SkillModel } from '../models/skill-model';
 import { CaseStudyNavComponent } from "../components/case-study-nav-component";
 
