@@ -17,6 +17,7 @@ export class ReleaseNotesProcessCaseStudyPage {
     { skill: 'Problem Framing',                color: SkillColor.Primary },
     { skill: 'How Might We Facilitation',      color: SkillColor.Green  },
     { skill: 'Retrospective Facilitation',     color: SkillColor.Green  },
+    { skill: 'Solution Design',                color: SkillColor.Secondary  },
     { skill: 'Data Analysis',                  color: SkillColor.Primary   },
     { skill: 'Insight Synthesis',              color: SkillColor.Primary  },
     { skill: 'Cross-functional Collaboration', color: SkillColor.Gold  },

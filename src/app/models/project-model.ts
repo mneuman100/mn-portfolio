@@ -30,8 +30,8 @@ export const PROJECTS: Project[] = [
     imageUrl: 'gold-dust.jpg',
     tags: [
       { label: 'Survey Design', color: 'green' },
-      { label: 'Discovery Interviews', color: 'gold' },
-      { label: 'Mixed-Methods Research', color: 'green' },
+      { label: 'Insight Synthesis', color: 'blue' },
+      { label: 'Cross-functional Collaboration', color: 'gold' },
     ],
     routerLink: 'case-study/client-survey'
   },
@@ -51,9 +51,9 @@ export const PROJECTS: Project[] = [
     description: 'Structured usability evaluation of two AI tools that prevented premature adoption',
     imageUrl: 'command-ai.jpg',
     tags: [
-      { label: 'Usability Evaluation', color: 'blue' },
-      { label: 'Structured Testing', color: 'green' },
-      { label: 'Risk Assessment', color: 'blue' },
+      { label: 'Usability Evaluation', color: 'green' },
+      { label: 'Risk Assessment', color: 'purple' },
+      { label: 'Cross-functional Collaboration', color: 'gold' },
     ],
     routerLink: 'case-study/ai-tools'
   },
@@ -62,9 +62,9 @@ export const PROJECTS: Project[] = [
     description: 'Content audit and IA redesign across RMIS and Billing that surfaced client needs ahead of formal feedback',
     imageUrl: 'billing-chart-after.jpg',
     tags: [
-      { label: 'Content Audit', color: 'purple' },
       { label: 'Information Architecture', color: 'purple' },
       { label: 'Gap Analysis', color: 'blue' },
+      { label: 'Cross-functional Collaboration', color: 'gold' },
     ],
     routerLink: 'case-study/help-center'
   },

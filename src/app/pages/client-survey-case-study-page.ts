@@ -13,7 +13,7 @@ export class ClientSurveyCaseStudyPage {
   skills: SkillModel[] = [
     { skill: 'Survey Design',                  color: SkillColor.Green   },
     { skill: 'Qualitative Research',           color: SkillColor.Primary   },
-    { skill: 'Stakeholder Interviews',         color: SkillColor.Gold  },
+    { skill: 'Client Interviews',              color: SkillColor.Gold  },
     { skill: 'Discovery Research',             color: SkillColor.Green   },
     { skill: 'Mixed-Methods Research',         color: SkillColor.Green   },
     { skill: 'Insight Synthesis',              color: SkillColor.Primary  },
