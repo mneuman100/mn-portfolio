@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './quote-block-component.scss',
 })
 export class QuoteBlockComponent {
-  @Input() quote: string = '';
-  @Input() attribution: string = '';
+  @Input() quote = '';
+  @Input() attribution = '';
 }

@@ -1,4 +1,4 @@
 export class ItemModel {
-    label: string = '';
-    description: string = '';
+    label = '';
+    description = '';
 }

@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrl: './case-study-nav-component.scss',
 })
 export class CaseStudyNavComponent {
-  @Input() next: string = '';
-  @Input() prev: string = '';
+  @Input() next = '';
+  @Input() prev = '';
 
   private router = inject(Router);
 
