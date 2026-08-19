@@ -15,7 +15,6 @@ export class TacitKnowledgeCaseStudyPage {
     { skill: 'User Shadowing',              color: SkillColor.Green   },
     { skill: 'Workflow Analysis',           color: SkillColor.Green   },
     { skill: 'Qualitative Research',        color: SkillColor.Primary   },
-    { skill: 'Observation and Note-taking', color: SkillColor.Green   },
     { skill: 'Knowledge Elicitation',       color: SkillColor.Green  },
     { skill: 'Insight Synthesis',           color: SkillColor.Primary  },
   ];

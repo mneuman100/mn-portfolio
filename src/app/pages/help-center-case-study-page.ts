@@ -18,7 +18,6 @@ export class HelpCenterCaseStudyPage {
     { skill: 'Stakeholder Interviews',          color: SkillColor.Gold  },
     { skill: 'Qualitative Research',            color: SkillColor.Primary   },
     { skill: 'Discovery Research',              color: SkillColor.Green   },
-    { skill: 'Prioritization Frameworks',       color: SkillColor.Secondary },
     { skill: 'Insight Synthesis',               color: SkillColor.Primary  },
     { skill: 'Cross-functional Collaboration',  color: SkillColor.Gold  },
   ];
