@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="card__tags">
-    @for (tag of project.tags; track tag.label) {
+    @for (tag of visibleTags; track tag.label) {
       <span [class]="getTagClass(tag.color)">{{ tag.label }}</span>
     }
   </div>

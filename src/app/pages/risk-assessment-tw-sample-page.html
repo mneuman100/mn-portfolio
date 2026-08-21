@@ -1,0 +1,119 @@
+<div class="tw-sample-page">
+    <app-case-study-hero-component
+        [title]="title"
+        [subtitle]="subtitle"
+        [company]="company"
+        [role]="role"
+        [tags]="skills">
+    </app-case-study-hero-component>
+
+    <h1 class="doc-title">Creating a Risk Assessment</h1>
+
+    <nav class="doc-toc">
+        <p class="doc-toc__title">Table of contents</p>
+        <ul>
+            <li>What is a risk assessment?</li>
+            <li>What a risk assessment isn't</li>
+            <li>Let's get started
+                <ul>
+                    <li>1. Get management approval</li>
+                    <li>2. Create your implementation team
+                        <ul>
+                            <li>Include IT experts</li>
+                        </ul>
+                    </li>
+                    <li>3. Identify the scope &amp; lens</li>
+                    <li>4. Create your risk assessment worksheet
+                        <ul>
+                            <li>Identify potential threat events</li>
+                            <li>Create a rating system</li>
+                            <li>Create a risk matrix and determine your risk tolerance threshold</li>
+                        </ul>
+                    </li>
+                    <li>5. Identify subject matter experts to interview</li>
+                    <li>6. Provide company-wide BCM training for risk assessment</li>
+                    <li>7. Send prework to SMEs</li>
+                    <li>8. Interview SMEs
+                        <ul>
+                            <li>Interview tips</li>
+                            <li>Ask open-ended questions</li>
+                            <li>Estimate likelihood</li>
+                            <li>Estimate impact</li>
+                            <li>Weigh threat events using your risk matrix</li>
+                            <li>Scope out vulnerabilities</li>
+                            <li>Recommend solutions</li>
+                        </ul>
+                    </li>
+                    <li>9. Finalize report
+                        <ul>
+                            <li>Add costs</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Next steps</li>
+            <li>The importance of repeating your risk assessment
+                <ul>
+                    <li>Evaluate previous risk assessments</li>
+                    <li>How often</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <p class="excerpt-disclosure">The below sample is an excerpt starting at Section 3, "Identify the Scope &amp; Lens."</p>
+
+    <div class="doc-panel">
+        <h2 id="identify-the-scope-lens">Identify the Scope &amp; Lens</h2>
+        <p>First, identify what you are going to asses (the scope), being mindful of any regulatory or budgetary requirements. Usually, these are the critical processes from your BIA.</p>
+        <p>Then, determine the view by which you will analyze the threat events (the lens). Here are some lens examples:</p>
+        <ul class="indented">
+            <li><p>by critical process</p></li>
+            <li><p>by location (offices, cloud based, divisions, etc.)</p></li>
+            <li><p>by department (can span multiple locations)</p></li>
+            <li><p>by system (infrastructure, servers, workstations, etc.)</p></li>
+            <li><p>by data type (customer, security, internal, etc.)</p></li>
+        </ul>
+        <p class="hanging-note hanging-note--note"><span class="hanging-label"><strong>Note:</strong></span><span class="hanging-body">The lens can change depending on what triggers the risk assessment. Triggers can include a new location, high staff turnover, a new critical process, etc.</span></p>
+
+        <h2 id="create-your-risk-assessment-worksheet">Create your Risk Assessment Worksheet</h2>
+        <p>The worksheet you create should (1) list all possible threat events for your chosen lens, (2) include a defined rating system for likelihood and impact, and (3) list the vulnerabilities and recommendations for each threat event.</p>
+        <p class="hanging-note hanging-note--tip"><span class="hanging-label"><strong>Tip</strong>:</span><span class="hanging-body">The provided <em>Risk Assessment Worksheet Template</em> may be ready to use as is or can be customized as needed.</span></p>
+
+        <h3 class="unnumbered" id="identify-potential-threat-events">Identify Potential Threat Events</h3>
+        <p>Brainstorm possible threat events using past experiences, team knowledge, and industry experts. Be forward-thinking, taking into account: changes in customer and industry trends, new technologies, future projects and processes, potential collateral damage due to your location, and potential changes to regulations/standards.</p>
+
+        <h3 class="unnumbered" id="create-a-rating-system">Create a Rating System</h3>
+        <p>Create a rating system to evaluate each threat event by their likelihood and impact level. This should be a general rating scale, not exact likelihoods.</p>
+        <p>Rating system example:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Likelihood Scale Example:</strong><br />
+                    <strong>1</strong> = Improbable<br />
+                    <strong>2</strong> = Unlikely<br />
+                    <strong>3</strong> = Reasonably Possible<br />
+                    <strong>4</strong> = Likely<br />
+                    <strong>5</strong> = Very Likely/Expected</th>
+                    <th><strong>Impact Scale Example:</strong><br />
+                    <strong>1</strong> = Insignificant<br />
+                    <strong>2</strong> = Minor<br />
+                    <strong>3</strong> = Moderate<br />
+                    <strong>4</strong> = Major<br />
+                    <strong>5</strong> = Catastrophic</th>
+                </tr>
+            </thead>
+        </table>
+
+        <h3 class="unnumbered" id="create-a-risk-matrix-and-determine-your-risk-tolerance-threshold">Create a Risk Matrix and Determine your Risk Tolerance Threshold</h3>
+        <p>Next, create a risk matrix that will be used to weigh your threat event based on its likelihood and impact levels. This matrix will also show your company's <strong>Risk Tolerance Threshold</strong>.</p>
+
+        <p class="end-of-excerpt">-end of excerpt-</p>
+    </div>
+
+    <app-case-study-nav-component
+        [next]="'TW_portfolio/importing-migration-files'"
+        [prev]="'TW_portfolio/business-impact-analysis'"
+        [itemLabel]="'Writing Sample'">
+    </app-case-study-nav-component>
+</div>

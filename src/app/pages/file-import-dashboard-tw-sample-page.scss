@@ -1,0 +1,40 @@
+@import '../doc-panel';
+
+.tw-sample-page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+
+  .doc-panel {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    h1 {
+      font-size: 17pt;
+      color: var(--text-primary);
+
+      &:first-of-type {
+        font-size: 26pt;
+        color: #323E4F;
+      }
+    }
+
+    h2, h3 {
+      font-size: 14pt;
+      color: var(--text-primary);
+    }
+
+    h4 {
+      font-size: 12pt;
+      color: var(--text-primary);
+    }
+
+    h6 {
+      font-size: 10pt;
+      color: var(--text-primary);
+    }
+  }
+
+  @media (max-width: 48rem) {
+    padding: 3rem 1.25rem 4rem;
+  }
+}

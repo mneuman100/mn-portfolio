@@ -1,0 +1,52 @@
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(69, 69, 69, 0.12);
+  padding: 1.25rem 1.5rem;
+
+  &--tip {
+    border-left: 3px solid var(--color-primary);
+
+    .callout__icon {
+      color: var(--color-primary);
+    }
+  }
+
+  &--internal {
+    border-left: 3px solid var(--color-internal);
+
+    .callout__icon {
+      color: var(--color-internal);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 0.3rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__wrench {
+    width: auto;
+    height: 1.5rem;
+  }
+
+  &__content {
+    color: var(--text-primary);
+
+    ::ng-deep p {
+      margin: 0;
+    }
+
+    ::ng-deep p + p {
+      margin-top: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../doc-panel';
+
+.tw-sample-page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+
+  .doc-title {
+    font-family: 'Calibri Light', Calibri, sans-serif;
+  }
+
+  .doc-panel {
+    font-family: 'Calibri Light', Calibri, sans-serif;
+
+    h2 {
+      font-size: 13pt;
+      color: #2F5496;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    padding: 3rem 1.25rem 4rem;
+  }
+}

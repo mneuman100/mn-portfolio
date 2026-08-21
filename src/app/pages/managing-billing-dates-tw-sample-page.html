@@ -1,0 +1,106 @@
+<div class="tw-sample-page">
+    <app-case-study-hero-component
+        [title]="title"
+        [subtitle]="subtitle"
+        [company]="company"
+        [role]="role"
+        [tags]="skills">
+    </app-case-study-hero-component>
+
+    <div class="doc-panel">
+        <h1 id="managing-billing-dates">Managing billing dates</h1>
+        <p>You can manage your billing dates on the billing profile and in the rating program.</p>
+
+        <app-callout-component type="tip">
+            <p>For account level billing, you can manage the billing dates in billing settings.</p>
+            <p><span class="fake-link">&gt; Learn how to manage the billing dates for account level billing</span></p>
+            <p><span class="fake-link">&gt; Learn more about the Invoice management module</span></p>
+        </app-callout-component>
+
+        <p>You can do the following:</p>
+        <ul>
+            <li><p><span class="fake-link">&gt; Manage billing dates on a billing profile</span></p></li>
+            <li><p><span class="fake-link">&gt; Manage billing dates on a rating program</span></p></li>
+        </ul>
+
+        <h2 id="to-manage-billing-dates-on-a-billing-profile">To manage billing dates on a billing profile</h2>
+        <ol type="1">
+            <li><p>At the client level, from the main menu, select <em><strong>Admin</strong></em>.</p></li>
+        </ol>
+        <ol start="2" type="1">
+            <li><p>In the <span class="redacted">xxxxxx</span> <span class="redacted">xxxxxxx</span> section, select billing profile.<br />
+            The <strong>Billing Profiles</strong> index screen displays.</p></li>
+        </ol>
+        <ol start="3" type="1">
+            <li><p>In the list, select the name of the billing profile you want to edit.<br />
+            The <strong>Billing Profile</strong> view screen displays.</p></li>
+        </ol>
+        <ol start="4" type="1">
+            <li><p>Select <em><strong>Edit Billing Profile</strong></em>.<br />
+            The billing profile screen displays.<br />
+            <span class="fake-link">&gt; Get detailed information about this screen</span></p></li>
+        </ol>
+        <ol start="5" type="1">
+            <li><p>Modify any of the following fields in the <span class="redacted">xxxxxx</span> <span class="redacted">xxxxxxx</span> section:</p>
+                <ul>
+                    <li><p><strong>Days Notice</strong>: The number of days between the date on which the invoice is sent and the date on which the invoice needs to be paid.</p></li>
+                    <li><p><strong>First Invoice Due Today or On The Policy's Effective Date</strong>: Select this option to override <strong>Days Notice</strong>. When selected, the invoice is due as soon as the policy is effective.</p></li>
+                    <li><p><strong>Due Date</strong>: The number of days between the billing period start date or policy effective date, and the date on which the invoice needs to be paid.</p></li>
+                    <li><p><strong>Endorsement Invoice Due Date</strong>: The number of days between an endorsement generating an invoice and the date on which the invoice needs to be paid.</p></li>
+                    <li><p><strong>Down Payment Due</strong>: The number of days between the start of the billing period and the date on which the down payment needs to be paid.</p></li>
+                    <li><p><strong>Exclude Days</strong>: Indicates if the invoice date is adjusted to the previous day when the invoice date falls on an excluded day.</p></li>
+                    <li><p><strong>Holidays</strong>: Indicates if the invoice date is adjusted to the previous day when the invoice date falls on a holiday or non-work day.</p></li>
+                    <li><p><strong>End of Month</strong>: Indicates if the due date is adjusted to the last day of the month.</p></li>
+                    <li><p><strong>Due Date Adjustment</strong>: The maximum number of days by which the due date can be manually adjusted.</p></li>
+                    <li><p><strong>Adjustment Role</strong>: The roles who have permission to adjust the due date by the number of days specified in Due Date Adjustment.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="6" type="1">
+            <li><p>Modify any of the following fields in the <span class="redacted">xxxxxx</span> <span class="redacted">xxxxxxx</span> <em><strong>Options</strong></em> section:</p>
+                <ul>
+                    <li><p><strong>Use effective date as due date</strong>: Determines if the Origami Risk system will uses the policy's effective day as the bill due day of the parent billing account.</p></li>
+                    <li><p><strong>Catch-up invoicing if first invoice is delayed</strong>: Determines if catch-up invoicing is used when the first invoice is delayed.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="7" type="1">
+            <li><p>Select <em><strong>Save Changes</strong></em>.</p></li>
+        </ol>
+
+        <h2 id="to-manage-billing-dates-on-a-rating-program">To manage billing dates on a rating program</h2>
+        <ol type="1">
+            <li><p>From the main menu, select <em><strong>Admin</strong></em>.</p></li>
+        </ol>
+        <ol start="2" type="1">
+            <li><p>In the <em><strong>Policies and Underwriting</strong></em> section, select <em><strong>Rating Programs</strong></em>.<br />
+            The <em><strong>Rating Programs</strong></em> index screen displays.</p></li>
+        </ol>
+        <ol start="3" type="1">
+            <li><p>In the list, select the rating program you want to edit.<br />
+            The rating program view screen displays.</p></li>
+        </ol>
+        <ol start="4" type="1">
+            <li><p>Select <em><strong>Edit Rating Program</strong></em>.</p></li>
+        </ol>
+        <ol start="5" type="1">
+            <li><p>Select <em><strong>More</strong></em>, and in the <em><strong>Rating Program</strong></em> section, select <em><strong>Billing and Commissions</strong></em>.</p></li>
+        </ol>
+        <ol start="6" type="1">
+            <li><p>Modify the following field:</p>
+                <ul>
+                    <li><p><strong>Agency Bill Due</strong>: Indicates how many days after generating an invoice the payment can be collected without penalty.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="7" type="1">
+            <li><p>Select <em><strong>Save Changes</strong></em>.</p></li>
+        </ol>
+    </div>
+
+    <app-case-study-nav-component
+        [next]="'TW_portfolio/performing-document-review'"
+        [prev]="'TW_portfolio/importing-migration-files'"
+        [itemLabel]="'Writing Sample'">
+    </app-case-study-nav-component>
+</div>

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class CaseStudyNavComponent {
   @Input() next = '';
   @Input() prev = '';
+  @Input() itemLabel = 'Case Study';
 
   private router = inject(Router);
 

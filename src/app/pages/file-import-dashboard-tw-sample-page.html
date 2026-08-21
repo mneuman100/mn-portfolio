@@ -1,0 +1,184 @@
+<div class="tw-sample-page">
+    <app-case-study-hero-component
+        [title]="title"
+        [subtitle]="subtitle"
+        [company]="company"
+        [role]="role"
+        [tags]="skills">
+    </app-case-study-hero-component>
+
+    <div class="doc-panel">
+        <h1 id="file-import-dashboard">File Import Dashboard</h1>
+        <p>Your dashboard consists of three main sections. We will go over the sections in the order in which your file will travel.</p>
+
+        <h2 id="start-a-new-import">Start a New Import</h2>
+        <p>This is where you will upload your data file to our database. Once your data file is uploaded to our database, the file will also be moved to the <strong>Incomplete Imports</strong> section of <strong>Your Dashboard</strong>.</p>
+        <ul>
+            <li><p><strong>Select Files Button</strong>: Select this button to start the upload process of your data file that contains all of the information about a loan set</p></li>
+        </ul>
+
+        <h2 id="incomplete-imports">Incomplete Imports</h2>
+        <p>This is where all files reside after they have been uploaded to our database but have not yet completed the <strong>Data Importer</strong> processes. These include: Mappings, Translations, Calculations, Pool Preferences and Assumptions. Once these processes are complete, the file then moves to the <strong>Ready To Review</strong> section of <strong>Your Dashboard</strong> where you can make changes or print the results.</p>
+        <ul>
+            <li><p><strong>Arrow:</strong> This arrow will be Gray while a file is being uploaded, and Green when it is finished. This button is used to access the Data Importer.</p></li>
+            <li><p><strong>(i):</strong> Use the <strong>Info</strong> button to see detailed information about your Data File.</p></li>
+            <li><p><strong>(X):</strong> Use the <strong>Delete</strong> button to delete the imported file from the system.</p></li>
+            <li><p><strong>(R):</strong> Use the <strong>Refresh</strong> button to refresh the information being displayed in the table.</p></li>
+        </ul>
+
+        <h2 id="ready-to-review">Ready To Review:</h2>
+        <p>This section shows all files that have completed the Data Importer process. Here, you can change values on the Pool Preferences and Assumptions pages which will impact the value, positive or negative, of the data. From the final summary page you can then sign off on your decisions.</p>
+        <ul>
+            <li><p><strong>Arrow:</strong> This button is used to access the Data Importer, starting at the Pool Preferences page.</p></li>
+            <li><p><strong>Reports:</strong> This section allows you to print out the results of the Analysis.</p></li>
+            <li><p><strong>Export:</strong></p>
+                <ul>
+                    <li><p><strong>Excel</strong>- This option allows you to export the results of the Analysis into an Excel Spreadsheet.</p></li>
+                    <li><p><strong>Intex</strong>- This option allows you to export the results of the Analysis into an Intex compatible file.</p></li>
+                </ul>
+            </li>
+            <li><p><strong>(R):</strong> Use the <strong>Refresh</strong> button to refresh the information being displayed in the table.</p></li>
+        </ul>
+
+        <h1 id="before-you-import-your-file">Before you Import your File</h1>
+        <p>Please review these requirements needed to ensure a successful import:</p>
+        <ol type="1">
+            <li><p>The system can only import files that are in the following formats: <strong>Excel</strong> (both .xls and .xlsx), and <strong>CSV</strong> formatted files.</p></li>
+            <li><p>The system can only import data located on the first tab of a spreadsheet. If you have data on other tabs, they must be moved to the first tab, or separated out into their own files.</p></li>
+        </ol>
+
+        <h1 id="importing-a-file">Importing a File</h1>
+        <p>The first step in using our system is to upload your data file that contains all of the information about a loan set.</p>
+        <ol type="1">
+            <li><p>Log into <strong>Analysis Suite.</strong></p></li>
+            <li><p>From <strong>Your Dashboard</strong>, click the <strong>Select Files</strong> button in the <strong>Start a New import</strong> section. This will access the <strong>Open</strong> dialog box.</p></li>
+            <li><p>Select the data file you want to upload, then click the <strong>Open</strong> button. The system will now begin uploading the file to our server.</p></li>
+            <li><p>Once the file has been successfully uploaded, it is moved to the <strong>Incomplete Imports</strong> section on <strong>Your Dashboard</strong>. From here, the system will begin uploading the data into our system.</p>
+                <ul>
+                    <li><p>Uploading data from your file may take several minutes.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="5" type="1">
+            <li><p>When the system is finished, the arrow will turn green.</p></li>
+        </ol>
+
+        <h1 id="mappings">Mappings</h1>
+        <p>Now that you have uploaded your file to the system, the next step is to map the custom fields in your file to the corresponding fields in Analysis Suite. This will enable Analysis Suite to analyze your data correctly.</p>
+
+        <h2 id="accessing-the-mapping-page">Accessing the Mapping Page</h2>
+        <ol type="1">
+            <li><p>Log into <strong>Analysis Suite.</strong></p></li>
+            <li><p>From <strong>Your Dashboard</strong>, find the file you want to work with from the <strong>Incomplete Imports</strong> section.</p>
+                <ul>
+                    <li><p>If your file is not there, first import it through the <strong>Start A New Import</strong> section.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="3" type="1">
+            <li><p>Click the <strong>Green arrow button</strong> to the right of your file to enter the <strong>Data Importer</strong>.</p>
+                <ul>
+                    <li><p>If the arrow button is grey, the system is still uploading the file. When complete, the arrow will turn green and you can continue.</p></li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="mapping-your-data-fields-to-the-system">Mapping your Data Fields to the System</h2>
+        <p>On the Mappings Page, you will manually map the custom fields in your file to the corresponding fields in Analysis Suite. <strong>Even though you are only required to map the 10 Critical Fields, we HIGHLY recommend that you map as many fields as possible to get the most accurate results from our system.</strong></p>
+        <p class="hanging-note"><span class="hanging-label"><strong>Note</strong>:</span><span class="hanging-body">When you first enter this page, a standard Template "Standard Mapping" has already been selected for you in the "Template" drop down list. This template attempts to automatically match as many fields as possible for you. Once you make a change in the workspace, you will be asked to create your own customized template.</span></p>
+        <ol type="1">
+            <li><p>In the <strong>Mappings Workspace</strong>, working from left to right, look at <strong>Field name</strong> in the <strong>Our Field Name</strong> section of the first row.</p></li>
+            <li><p>Using the table below, decide which of your columns (in your data file) match the description for <strong>Our Field Name</strong>.</p>
+                <ul>
+                    <li><p>You may need to review your data file from your computer to determine the best match.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="3" type="1">
+            <li><p>Once you have found the matching column from your data file, select that column name from the <strong>Your Column Name</strong> drop down list, on the right, in the same row (<strong>To access the drop down list</strong>, click the field to turn it green, then click again to open the drop down list containing your list of column names.)</p>
+                <ul>
+                    <li><p>If there is already a column name in this field, verify it is correct, or select the correct one from the drop down list.</p></li>
+                    <li><p><strong>Advanced Tip</strong>: To find your field faster, once the drop down list is showing, type a portion of the field name. The drop down list will then automatically limit your choices to only those that contain your typed text.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="4" type="1">
+            <li><p>Now that you have made a change to the standard Template, the <strong>Copy Existing Mapping Template</strong> dialog box will be displayed.</p>
+                <ul>
+                    <li><p>Select a new name for your Template, and add an optional description. Once saved, your new template will be added to the <strong>Template</strong> Drop down list on the <strong>Mappings Workspace</strong> where it can be reused.</p></li>
+                </ul>
+            </li>
+            <li><p>Now that you have saved your custom Template, continue down each row until all fields are correctly mapped. We HIGHLY recommend that you map as many fields as possible to get the most accurate results from our system.</p>
+                <ul>
+                    <li><p><strong>Advanced Tip</strong>: While you are working, review the <strong>Mapping Statistics</strong> section, on the right, to check your progress.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="6" type="1">
+            <li><p>When you are done mapping the fields, click the <strong>Next</strong> button to continue to the <strong>Translations</strong> Page.</p>
+                <ul>
+                    <li><p>The Next button will be grayed out and unusable until you have mapped all 10 Critical Fields.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="7" type="1">
+            <li><p>After clicking <strong>Next</strong>, the <strong>Verify Information</strong> page is displayed.</p></li>
+            <li><p>Make any needed changes, then click <strong>Save and Continue.</strong></p></li>
+        </ol>
+
+        <h1 id="translations">Translations</h1>
+        <p>Now that you have mapped your columns to our system, the next step is to verify that your data, from certain fields, will be translated properly into the system. This is a very important step that allows Analysis Suite to analyze your data correctly.</p>
+
+        <h2 id="accessing-the-translations-page">Accessing the Translations Page</h2>
+        <ol type="1">
+            <li><p>Log into <strong>Analysis Suite.</strong></p></li>
+            <li><p>From <strong>Your Dashboard</strong>, find the file you want to work with from the <strong>Incomplete Imports</strong> section.</p></li>
+            <li><p>Click the <strong>Green arrow button</strong> to the right of your file to enter the <strong>Data Importer</strong>.</p></li>
+            <li><p>You are now on the Mappings page. If all the information is correct, click <strong>Next.</strong></p></li>
+            <li><p>After clicking <strong>Next</strong>, the <strong>Verify Information</strong> page is displayed.</p></li>
+            <li><p>On this page make any needed changes, then click <strong>Save and Continue.</strong></p></li>
+            <li><p>You are now at the <strong>Translations</strong> Page.</p></li>
+        </ol>
+
+        <h2 id="translating-our-fields-to-your-data">Translating Our Fields to Your Data</h2>
+        <p>On the <strong>Translations</strong> Page, you will focus on certain fields from your data file (determined from the <strong>Mappings</strong> page). From here, you will manually link the <em>data in our fields</em> to the data in your data file's columns. As with Mapping, <strong>we HIGHLY recommend that you translate as many fields as possible to get the most accurate results from our system.</strong></p>
+        <p class="hanging-note"><span class="hanging-label"><strong>Note</strong>:</span><span class="hanging-body">When you first enter this page, a standard Template, "Standard Translation", has already been selected for you in the "Template" drop down list. This template attempts to automatically match as many fields as possible for you. Once you make a change in the workspace, you will be asked to create your own customized template.</span></p>
+        <ol type="1">
+            <li><p>In the <strong>Translations Workspace</strong>, working from left to right, look at the first Field name, bolded. This is the first field that needs translation. Under this field is a section that shows several rows, one for each of your distinct data items in this field.</p></li>
+            <li><p>Focusing just on the field's section, you will see the following columns:</p>
+                <ul>
+                    <li><p><strong>Field Name</strong>, shows the field name again.</p></li>
+                    <li><p><strong>Your Value</strong>, shows each of your distinct data items in this field</p></li>
+                    <li><p><strong>Our Value</strong>, shows the detailed information that we will translate your data into.</p></li>
+                </ul>
+            </li>
+            <li><p>Now, determine if your data in the <strong>Your Value</strong> column matches what may have been automatically selected in the <strong>Our Value</strong> column.</p></li>
+            <li><p>Change any selections in the <strong>Our Value</strong> column using the drop down list.</p>
+                <ul>
+                    <li><p>Once you make your first change, the <strong>Copy Existing Mapping Template</strong> dialog box will be displayed.</p></li>
+                </ul>
+                <ul>
+                    <li><p>Select a new name for your Template, and add an optional description. Once saved, your new template will be added to the <strong>Template</strong> Drop down list on the <strong>Translations Workspace</strong> where it can be reused.</p></li>
+                </ul>
+            </li>
+            <li><p>Now, continue down each row until all fields are correctly mapped.</p>
+                <ul>
+                    <li><p><strong>Advanced Tip</strong>: When you are finished translating all the values for a field, click the small triangle next to the <strong>Bolded</strong> <strong>Field Name</strong> to close that section. You can click the triangle again to re-open the section.</p></li>
+                </ul>
+            </li>
+        </ol>
+        <ol start="6" type="1">
+            <li><p>When you are done mapping the fields, click the <strong>Next</strong> button to continue to the <strong>Validations</strong> Page.</p>
+                <ul>
+                    <li><p>The Next button will be grayed out and unusable until you have mapped all 8 Critical Fields.</p></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <app-case-study-nav-component
+        [next]="'TW_portfolio/acceptable-use-policy'"
+        [prev]="'TW_portfolio/timesheet-approval-process'"
+        [itemLabel]="'Writing Sample'">
+    </app-case-study-nav-component>
+</div>
