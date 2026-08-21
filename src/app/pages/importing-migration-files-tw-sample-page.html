@@ -1,0 +1,125 @@
+<div class="tw-sample-page">
+    <app-case-study-hero-component
+        [title]="title"
+        [subtitle]="subtitle"
+        [company]="company"
+        [role]="role"
+        [tags]="skills">
+    </app-case-study-hero-component>
+
+    <div class="doc-panel">
+        <h1 id="importing-migration-files">Importing migration files</h1>
+        <p>Download and import migration files or configuration templates to another environment.</p>
+        <p><span class="fake-link">&gt; Learn how to create migration exports</span></p>
+        <p><span class="fake-link">&gt; Learn how to manage migration exports</span></p>
+        <p><span class="fake-link">&gt; Learn more about configuration migration</span></p>
+
+        <h2 id="to-download-a-migration-file">To download a migration file</h2>
+        <ol type="1">
+            <li><p>From the main menu, select <em><strong>Admin</strong></em>.</p></li>
+            <li><p>In the <em><strong>Administration</strong></em> section, select <em><strong>Configuration Migrations</strong></em>.</p></li>
+            <li><p>Select <em><strong>Go to Exports</strong></em>.</p></li>
+            <li><p>Select the migration export you want to download.</p></li>
+            <li><p>Select <em><strong>Download Migration File</strong></em>.</p></li>
+            <li><p>Select <em><strong>OK</strong></em>.<br />
+            The migration file is downloaded.</p></li>
+        </ol>
+
+        <app-callout-component type="tip">
+            <p>If the system finds a problem when building the download file, a message is displayed with instructions on how to continue downloading</p>
+        </app-callout-component>
+
+        <h2 id="to-import-a-migration-file">To import a migration file</h2>
+
+        <app-callout-component type="tip">
+            <p>Before you can import a custom configuration package to your database, you must download the migration file for the package you want to import.<br />
+            <span class="fake-link">&gt; Learn how to download a migration file</span></p>
+        </app-callout-component>
+
+        <ol type="1">
+            <li><p>From the main menu, select <em><strong>Admin</strong></em>.</p></li>
+            <li><p>In the <em><strong>Administration</strong></em> section, select <em><strong>Configuration Migrations</strong></em>.</p></li>
+            <li><p>Select <em><strong>Start New Import</strong></em>.</p></li>
+            <li><p>Select the migration file you want to import.</p></li>
+            <li><p>Select <em><strong>Start Migration Import</strong></em>.</p></li>
+            <li><p>On the <em><strong>Migration Imports</strong></em> screen, select <em><strong>Test Import</strong></em>.<br />
+            <span class="fake-link">&gt; Get detailed information about this screen</span></p></li>
+            <li><p>Resolve errors and field aliases, if required.<br />
+            <span class="fake-link">&gt; Learn more about correcting errors on imports</span></p></li>
+            <li><p>Once there are no errors, field aliases, or changes to review, select <em><strong>Apply Migration Changes</strong></em> to complete the installation and update the database.</p></li>
+        </ol>
+
+        <h2 id="to-compare-and-merge-migration-files-during-import"><img src="wrench-icon.svg?v=3" alt="" class="gear-icon" />To compare and merge migration files during import</h2>
+
+        <app-callout-component type="tip">
+            <p>Before you can import a custom configuration package to your database, you must download the migration file for the package you want to import.<br />
+            <span class="fake-link">&gt; Learn how to download a migration file</span></p>
+        </app-callout-component>
+
+        <ol type="1">
+            <li><p>From the main menu, select <em><strong>Admin</strong></em>.</p></li>
+            <li><p>In the <em><strong>Administration</strong></em> section, select <em><strong>Configuration Migrations</strong></em>.</p></li>
+            <li><p>Select <em><strong>Start New Import</strong></em>.</p></li>
+            <li><p>Select the migration file you want to import.</p></li>
+            <li><p>Select <em><strong>Start Migration Import</strong></em>.</p></li>
+            <li><p>On the <em><strong>Migration Imports</strong></em> screen, select <em><strong>Test Import</strong></em>.<br />
+            <span class="fake-link">&gt; Get detailed information about this screen</span></p></li>
+            <li><p>Resolve errors and field aliases, if required.<br />
+            <span class="fake-link">&gt; Learn more about correcting errors on imports</span></p></li>
+            <li><p>Select <em><strong>Compare/Merge</strong></em>.<br />
+            A screen displays listing all the configurations being updated.</p></li>
+        </ol>
+        <ol start="9" type="1">
+            <li><p>Select the configuration you want to compare and merge.<br />
+            A screen displays showing the current data in the source file being imported, an <em><strong>Editor</strong></em> area, and data in the destination.</p></li>
+        </ol>
+        <ol start="10" type="1">
+            <li><p>To make changes, in the <em><strong>Editor</strong></em> area, enter the changes and select <em><strong>Apply</strong></em>.<br />
+            The system saves the new value in the destination regardless of what is in the importing file.</p></li>
+        </ol>
+
+        <h2 id="to-push-a-migration-export-to-another-environment">To push a migration export to another environment</h2>
+        <p>Push a custom export directly to another database, instead of downloading and manually importing migration files.</p>
+
+        <app-callout-component type="tip">
+            <p>Before you can push an export to another environment, the Service team must create a logical environment for you.</p>
+        </app-callout-component>
+
+        <app-callout-component type="internal">
+            <p>Before you can push an export to another environment, you must create a logical environment.</p>
+            <p>Logical environments are domains you can use to define the environments to which you can push your exports.</p>
+            <p><span class="fake-link">&gt; Learn how to create logical environments</span></p>
+            <p><span class="fake-link">&gt; Learn how to manage logical environments</span></p>
+        </app-callout-component>
+
+        <ol type="1">
+            <li><p>From the main menu, select <em><strong>Admin</strong></em>.</p></li>
+            <li><p>In the <em><strong>Administration</strong></em> section, select <em><strong>Configuration Migrations</strong></em>.</p></li>
+            <li><p>Select <em><strong>Go to Exports</strong></em>.</p></li>
+            <li><p>Select the migration export you want to push to another environment.</p></li>
+            <li><p>Select <em><strong>Push Migration</strong></em>.</p></li>
+            <li><p>Provide the relevant values, for example, the environment to which you want to push the export.<br />
+            <span class="fake-link">&gt; Get detailed information about this screen</span></p></li>
+            <li><p>Select <em><strong>Save Migration Schedule</strong></em>.</p></li>
+        </ol>
+
+        <h2 id="to-import-a-configuration-template-from-the-configuration-repository"><img src="wrench-icon.svg?v=3" alt="" class="gear-icon" />To import a configuration template from the configuration repository</h2>
+        <p>A configuration template is a default configuration package that you can import into your database.</p>
+        <p><span class="fake-link">&gt; Learn how to install and test a configuration template in your database</span></p>
+        <ol type="1">
+            <li><p>From the main menu, select <em><strong>Admin</strong></em>.</p></li>
+            <li><p>In the <em><strong>Administration</strong></em> section, select <em><strong>Configuration Migrations</strong></em>.</p></li>
+            <li><p>Select <em><strong>More</strong></em> &gt; <em><strong>Configuration Template Repository</strong></em>.</p></li>
+            <li><p>Select <em><strong>Install</strong></em> for the configuration template you want to import.</p></li>
+            <li><p>Resolve errors and field aliases, if required.<br />
+            <span class="fake-link">&gt; Learn more about correcting errors</span></p></li>
+            <li><p>Once there are no errors, field aliases, or changes to review, select <em><strong>Apply Migration Changes</strong></em> to complete the installation and update the database.</p></li>
+        </ol>
+    </div>
+
+    <app-case-study-nav-component
+        [next]="'TW_portfolio/managing-billing-dates'"
+        [prev]="'TW_portfolio/risk-assessment'"
+        [itemLabel]="'Writing Sample'">
+    </app-case-study-nav-component>
+</div>

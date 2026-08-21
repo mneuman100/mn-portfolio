@@ -1,0 +1,259 @@
+// Shared structural styling for embedded technical-writing sample documents.
+// Container chrome and element defaults live here; each *-tw-sample-page.scss
+// file overrides heading font-family/size/color with that sample's own typography.
+
+// .doc-title and .hanging-note are used both inside .doc-panel and standalone
+// (e.g. a document title placed above a table of contents), so they're unscoped.
+.doc-title {
+  font-size: 28pt;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.75rem 0 0.75rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Hanging-indent "Note:"/"Tip:" run-in labels, built with flexbox rather than
+// negative text-indent + fixed-width inline-block — the indent hack renders
+// inconsistently across browsers (confirmed broken in Firefox), flexbox does not.
+.hanging-note {
+  display: flex;
+  align-items: baseline;
+
+  .hanging-label {
+    flex-shrink: 0;
+    margin-right: 0.35em;
+  }
+
+  .hanging-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.doc-panel {
+  background-color: #fbfbfa;
+  border: 1px solid rgba(69, 69, 69, 0.14);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  padding: 2rem 2.25rem;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 1.75rem 0 0.75rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin: 0 0 1.1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul, ol {
+    margin: 0 0 1.1rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul, ol {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  ul, ul ul, ul ul ul {
+    list-style-type: disc;
+  }
+
+  ul li::marker {
+    color: var(--text-primary);
+  }
+
+  .redacted {
+    display: inline-block;
+    vertical-align: baseline;
+    color: #808080;
+    background-color: #808080;
+    border-radius: 0.15em;
+    padding: 0.05em 0;
+    line-height: 1.05;
+  }
+
+  .redacted + .redacted {
+    margin-left: 0.3em;
+  }
+
+  blockquote {
+    margin: 0 0 1.1rem;
+    padding: 0.25rem 0 0.25rem 1rem;
+    border-left: 2px solid rgba(69, 69, 69, 0.2);
+    color: var(--text-secondary);
+
+    p {
+      margin: 0 0 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.1rem;
+    font-size: var(--font-size-small);
+
+    th, td {
+      border: 1px solid rgba(69, 69, 69, 0.2);
+      padding: 0.625rem 0.875rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: rgba(69, 69, 69, 0.06);
+      font-weight: 700;
+    }
+  }
+
+  .fake-link {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .doc-panel__inline-placeholder {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.4em;
+    margin: 0 0.2em;
+    background-color: rgba(69, 69, 69, 0.08);
+    border: 1px dashed rgba(69, 69, 69, 0.3);
+    border-radius: 0.25em;
+    color: var(--text-secondary);
+    font-size: 0.85em;
+    font-style: italic;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .gear-icon {
+    display: inline-block;
+    width: auto;
+    height: 1em;
+    object-fit: contain;
+    vertical-align: -0.15em;
+    margin-right: 0.2em;
+    color: var(--color-internal);
+  }
+
+  mark {
+    background-color: #d9d9d9;
+    color: inherit;
+    padding: 0.05em 0.2em;
+    border-radius: 0.2em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+  }
+
+  app-callout-component {
+    display: block;
+    margin: 0 0 1.1rem;
+  }
+
+  .doc-panel__icon-placeholder {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    margin-right: 0.2em;
+    background-color: rgba(69, 69, 69, 0.08);
+    border: 1px dashed rgba(69, 69, 69, 0.3);
+    border-radius: 0.2em;
+  }
+
+  .doc-panel__image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8rem;
+    margin: 0 0 1.1rem;
+    background-color: rgba(69, 69, 69, 0.05);
+    border: 1px dashed rgba(69, 69, 69, 0.25);
+    border-radius: 0.5rem;
+    color: var(--text-secondary);
+    font-size: var(--font-size-small);
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .end-of-excerpt {
+    margin: 1.5rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(69, 69, 69, 0.25);
+    color: var(--text-secondary);
+    font-size: var(--font-size-small);
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.doc-toc {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(69, 69, 69, 0.14);
+  border-radius: 0.75rem;
+  background-color: rgba(69, 69, 69, 0.03);
+
+  &__title {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin: 0 0 0.75rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--text-primary);
+    font-size: var(--font-size-small);
+    line-height: 1.8;
+    list-style: none;
+
+    ul {
+      padding-left: 1.25rem;
+    }
+  }
+}
+
+.excerpt-disclosure {
+  margin: 0 0 1.5rem;
+  color: var(--text-secondary);
+  font-size: var(--font-size-small);
+  font-style: italic;
+}

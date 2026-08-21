@@ -15,6 +15,10 @@ export class ProjectCardComponent {
 
   private router = inject(Router);
 
+  get visibleTags() {
+    return this.project.tags.slice(0, 3);
+  }
+
   getTagClass(color: string): string {
     return `card__tag card__tag--${color}`;
   }

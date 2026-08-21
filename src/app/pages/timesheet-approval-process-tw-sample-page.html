@@ -1,0 +1,76 @@
+<div class="tw-sample-page">
+    <app-case-study-hero-component
+        [title]="title"
+        [subtitle]="subtitle"
+        [company]="company"
+        [role]="role"
+        [tags]="skills">
+    </app-case-study-hero-component>
+
+    <p class="excerpt-disclosure">The below sample is an excerpt.</p>
+
+    <div class="doc-panel">
+        <h1 class="unnumbered" id="review-timesheets">Review Timesheets</h1>
+        <p>Once time is reviewed, you can now review each Timesheet.</p>
+        <ol type="1">
+            <li><p>Select <strong>Time &amp; Expense &gt; My approvals</strong>.</p></li>
+            <li><p>From the <strong>Summary Tab</strong>, select: <strong>Time Sheets Pending Approval</strong></p></li>
+            <li><p>Click on the date range for each employee to drill into their Timesheet.</p></li>
+        </ol>
+
+        <h2 id="review-lunch-ticket-and-admin-wrap-entries">Review Lunch Ticket and Admin Wrap Entries</h2>
+        <ol type="1">
+            <li><p>In each Timesheet, verify that the <strong>Lunch Ticket</strong> entries = zero time (It will be in red if correct.)</p></li>
+            <li><p>Then verify the length of each <strong>Admin Wrap</strong> entry. These are Identified on the Timesheet as:</p>
+                <ul>
+                    <li><p>Company= "Tech Corp."</p></li>
+                    <li><p>Description= "Admin"</p></li>
+                </ul>
+            </li>
+            <li><p>Any Admin Wraps greater than an hour will be dealt with by the Manager, as they see fit.</p></li>
+        </ol>
+
+        <h2 id="search-for-tickets-in-enter-timefix-ticket-status">Search for Tickets in "Enter Time/Fix Ticket" Status</h2>
+        <p>Now, make sure no Tickets are in the "Enter Time/Fix Ticket" status.</p>
+        <ol type="1">
+            <li><p>Navigate to <strong>Service Desk &gt; Service Board &gt; Service Ticket Search.</strong></p></li>
+            <li><p>In the <strong>Status</strong> field, select "Time/Fix Ticket".</p></li>
+            <li><p>Then click Search.</p></li>
+            <li><p>Reject any ticket entries that are displayed in the Search Results. (see the section "Reject Incorrect Timesheets" below)</p></li>
+        </ol>
+
+        <h2 id="verify-hours">Verify <span class="redacted">xxxxxxx</span> <span class="redacted">xxxxxxxx</span> Hours</h2>
+        <p>Verify that the total hours in the <span class="redacted">xxxxxxx</span> <span class="redacted">xxxxxxxx</span> app are <u>less than or equal to</u> what is in the <span class="redacted">xxxxxxxxxxx</span> app.</p>
+        <ol type="1">
+            <li><p>Navigate to: [https:// <span class="redacted">xxxxx</span>. <span class="redacted">xxxxxxxxxxxxxx</span>.com/signin] (See the <span class="redacted">xx</span> <span class="redacted">xxxx</span> app for credentials.)</p></li>
+            <li><p>Click "View Time" for employee.</p></li>
+            <li><p>Select the Date Filter to match the pay period being reviewed.</p></li>
+            <li><p>Note the total Billable Hours.</p></li>
+            <li><p>Now, run the <strong>Time &amp; Expense Report</strong> in the <span class="redacted">xxxxxxxxx</span> app and note those total billable hours. (See "Review Time," above, for instructions on how to access this report.)</p></li>
+            <li><p>After you have both counts, compare the two total hours. The <span class="redacted">xxxxxxx</span> <span class="redacted">xxxxxxxx</span> app hours should be <u>less than or equal to</u> what is in the <span class="redacted">xxxxxxxxxx</span> app.</p></li>
+            <li><p>If it is not, then reject their Timesheet and remind them to edit as needed to make the hours and timesheet match. (see the section "Reject Incorrect Timesheets" below)</p></li>
+        </ol>
+
+        <h1 class="unnumbered" id="approve-timesheet">Approve Timesheet</h1>
+        <p>Once a Timesheet passes the above review process with no errors, you can approve the Timesheet.</p>
+        <ol type="1">
+            <li><p>Select <strong>Time &amp; Expense &gt; My Approvals</strong>.</p></li>
+            <li><p>From the <strong>Summary Tab</strong>, select: <strong>Time Sheets Pending Approval</strong></p></li>
+            <li><p>Click on the date range for each employee to drill into their Timesheet.</p></li>
+            <li><p>Double-check for errors on the Timesheet:</p>
+                <ul>
+                    <li><p>If there ARE errors, skip to the next section, to reject the Timesheet.</p></li>
+                    <li><p>If there are NO errors, select the "approve" button.</p></li>
+                </ul>
+            </li>
+        </ol>
+
+        <p class="end-of-excerpt">-end of excerpt-</p>
+    </div>
+
+    <app-case-study-nav-component
+        [next]="'TW_portfolio/file-import-dashboard'"
+        [prev]="'TW_portfolio/release-note-sample'"
+        [itemLabel]="'Writing Sample'">
+    </app-case-study-nav-component>
+</div>

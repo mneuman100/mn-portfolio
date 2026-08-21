@@ -1,0 +1,54 @@
+@import '../doc-panel';
+
+.tw-sample-page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+
+  .doc-panel {
+    font-family: 'Lato', sans-serif;
+
+    h1 {
+      font-size: 28pt;
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    h2 {
+      font-size: 14pt;
+      color: #454545;
+    }
+
+    h3 {
+      color: #454545;
+    }
+
+    h5 {
+      color: #70AD47;
+      border-top: 0.5pt solid #70AD47;
+      padding-top: 0.6em;
+      margin-top: 2.5rem;
+      margin-bottom: 0.25rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      + h2 {
+        margin-top: 18pt;
+      }
+    }
+
+    table th {
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    padding: 3rem 1.25rem 4rem;
+  }
+}

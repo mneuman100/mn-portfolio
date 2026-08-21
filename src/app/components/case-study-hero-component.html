@@ -3,7 +3,7 @@
     @if (subtitle) {
         <h3 class="page-subtitle">{{ subtitle }}</h3>
     }
-    <p class="page-company-info">{{ company }} | {{ year }}</p>
+    <p class="page-company-info">{{ company }} | {{ role || year }}</p>
 
     @if (summary) {
         <p class="summary">{{ summary }}</p>

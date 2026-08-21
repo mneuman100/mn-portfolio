@@ -1,0 +1,48 @@
+@import '../doc-panel';
+
+.tw-sample-page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+
+  .doc-panel {
+    counter-reset: aup-h1;
+
+    h1 {
+      color: var(--text-primary);
+
+      &:not(.doc-title) {
+        font-size: 16pt;
+        padding-left: 0.7em;
+        text-indent: -0.7em;
+        counter-increment: aup-h1;
+        counter-reset: aup-h2;
+
+        &::before {
+          content: counter(aup-h1);
+          display: inline-block;
+          width: 0.7em;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 400;
+      color: #272727;
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+      counter-increment: aup-h2;
+
+      &::before {
+        content: counter(aup-h1) '.' counter(aup-h2);
+        display: inline-block;
+        width: 1.5em;
+      }
+    }
+  }
+
+  @media (max-width: 48rem) {
+    padding: 3rem 1.25rem 4rem;
+  }
+}
