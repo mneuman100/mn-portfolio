@@ -1,0 +1,52 @@
+<div class="tw-index">
+  <main class="tw-index__main">
+    <section class="hero">
+      <div class="hero__content">
+        <p class="hero__heading smaller-font heading-upper">Hi, I'm Meghan!</p>
+        <p class="hero__heading">[INSERT TW INDEX BLURB HERE]</p>
+      </div>
+    </section>
+
+    <div class="timeline">
+      <div class="timeline__line"></div>
+
+      <section class="intro timeline__item">
+        <div class="timeline__dot"></div>
+        <p class="intro__eyebrow">Technical Writing Portfolio</p>
+        <h1 class="intro__heading">Writing Samples</h1>
+      </section>
+
+      <section class="filters timeline__item" aria-label="Filter by document type">
+        <span class="filters__label">Filter By:</span>
+        @for (filter of documentTypeFilters; track filter) {
+          <button
+            type="button"
+            class="filters__button"
+            [class.filters__button--active]="activeFilter === filter"
+            (click)="setFilter(filter)"
+          >{{ filter }}</button>
+        }
+        <button
+          type="button"
+          class="filters__button"
+          [class.filters__button--active]="activeFilter === null"
+          (click)="setFilter(null)"
+        >All</button>
+      </section>
+
+      <section class="grid timeline__item">
+        @for (card of visibleCards; track card.project.routerLink; let i = $index) {
+          <app-project-card appFadeInView [project]="card.project" [index]="i"
+            [style.transition-delay]="(i * 0.1) + 's'" />
+        }
+        <div class="grid__spacer"></div>
+      </section>
+
+      <section class="testimonials timeline__item">
+        <div class="timeline__dot"></div>
+        <h2 class="testimonials__heading">Testimonials</h2>
+        <app-testimonials [testimonials]="testimonials" />
+      </section>
+    </div>
+  </main>
+</div>

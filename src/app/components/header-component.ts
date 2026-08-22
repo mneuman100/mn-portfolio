@@ -11,6 +11,10 @@ import { Router, RouterModule } from '@angular/router';
 export class HeaderComponent {
   private router = inject(Router);
 
+  get aboutPath(): string {
+    return this.router.url.startsWith('/TW_portfolio') ? 'TW_portfolio/about' : 'about';
+  }
+
   onWorkClick(): void {
     if (this.router.url === '/') {
       document.getElementById('work')!.scrollIntoView({ behavior: 'smooth' });
@@ -19,11 +23,16 @@ export class HeaderComponent {
     }
   }
 
+  onAboutClick(): void {
+    this.onNavButtonClick(this.aboutPath);
+  }
+
   onTestimonialsClick(): void {
-    if (this.router.url === '/about') {
+    const path = this.aboutPath;
+    if (this.router.url === '/' + path) {
       document.getElementById('testimonials')!.scrollIntoView({ behavior: 'smooth' });
     } else {
-      this.router.navigate(['/about'], { queryParams: { testimonials: 'true' } });
+      this.router.navigate([path], { queryParams: { testimonials: 'true' } });
     }
   }
 

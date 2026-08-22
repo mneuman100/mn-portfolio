@@ -1,0 +1,49 @@
+<div class="recs">
+  <div class="recs__card">
+    <p class="recs__quote">"{{ testimonials[currentIndex].quote }}"</p>
+
+    <div class="recs__footer">
+      <div class="recs__author">
+        <img
+          [src]="testimonials[currentIndex].avatar"
+          [alt]="testimonials[currentIndex].name"
+          class="recs__avatar"
+        />
+        <div>
+          <div class="recs__name">{{ testimonials[currentIndex].name }}</div>
+          <div class="recs__role">{{ testimonials[currentIndex].role }}</div>
+        </div>
+      </div>
+      <div class="recs__tags">
+        @for (tag of testimonials[currentIndex].tags; track tag) {
+          <span [class]="getTagClass(tag)">{{ tag }}</span>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="recs__controls">
+    <div class="recs__nav">
+      <button class="recs__nav-btn" (click)="prev()" aria-label="Previous recommendation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <button class="recs__nav-btn" (click)="next()" aria-label="Next recommendation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="recs__dots">
+      @for (rec of testimonials; track rec.id; let i = $index) {
+        <button
+          class="recs__dot"
+          [class.recs__dot--active]="i === currentIndex"
+          (click)="goTo(i)"
+          [attr.aria-label]="'Go to recommendation ' + (i + 1)"
+        ></button>
+      }
+    </div>
+  </div>
+</div>
