@@ -1,4 +1,5 @@
 import { SkillColor, SkillModel } from './skill-model';
+import { Project, Tag } from './project-model';
 
 export enum TwTagCategory {
   Tool = 'Tool',
@@ -14,6 +15,14 @@ const CATEGORY_COLOR: Record<TwTagCategory, SkillColor> = {
   [TwTagCategory.Skill]: SkillColor.Primary,
 };
 
+// Card-tag color keywords consumed by ProjectCardComponent's card__tag--{color} classes.
+const CATEGORY_CARD_COLOR: Record<TwTagCategory, string> = {
+  [TwTagCategory.Tool]: 'green',
+  [TwTagCategory.DocumentType]: 'purple',
+  [TwTagCategory.Audience]: 'gold',
+  [TwTagCategory.Skill]: 'blue',
+};
+
 export interface TwSampleTag {
   label: string;
   category: TwTagCategory;
@@ -22,17 +31,39 @@ export interface TwSampleTag {
 export interface TwSample {
   slug: string;
   title: string;
+  /** Shorter title for the index card grid; defaults to `title` when omitted. */
+  cardTitle?: string;
   subtitle: string;
   company: string;
   role: string;
   tags: TwSampleTag[];
   cardBlurb: string;
   cardChipLabels: string[];
+  imageUrl: string;
   routerLink: string;
 }
 
 export function twTagsToSkills(tags: TwSampleTag[]): SkillModel[] {
   return tags.map(tag => ({ skill: tag.label, color: CATEGORY_COLOR[tag.category] }));
+}
+
+export function twSampleDocumentType(sample: TwSample): string {
+  return sample.tags.find(tag => tag.category === TwTagCategory.DocumentType)?.label ?? '';
+}
+
+export function twSampleToProject(sample: TwSample): Project {
+  const tags: Tag[] = sample.cardChipLabels.map(label => {
+    const category = sample.tags.find(tag => tag.label === label)?.category ?? TwTagCategory.Skill;
+    return { label, color: CATEGORY_CARD_COLOR[category] };
+  });
+
+  return {
+    title: sample.cardTitle ?? sample.title,
+    description: sample.cardBlurb,
+    imageUrl: sample.imageUrl,
+    tags,
+    routerLink: sample.routerLink,
+  };
 }
 
 export const TW_SAMPLES: TwSample[] = [
@@ -52,6 +83,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A topic that uses conditional content to hide internal-only steps, with prerequisites and error handling built in.',
     cardChipLabels: ['Conditional Content', 'Online Help Center', 'Mixed audience'],
+    imageUrl: 'importing-migration-files.svg',
     routerLink: 'TW_portfolio/importing-migration-files',
   },
   {
@@ -70,6 +102,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A topic that helps users find where to configure a billing date setting, since the right location depends on how the system is set up.',
     cardChipLabels: ['Override Logic', 'Online Help Center', 'System Navigation'],
+    imageUrl: 'managing-billing-dates.svg',
     routerLink: 'TW_portfolio/managing-billing-dates',
   },
   {
@@ -87,6 +120,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A guide for one-time external users using secure access.',
     cardChipLabels: ['First-Time User Guide', 'Online Help Center', 'Mixed audience'],
+    imageUrl: 'performing-document-review.svg',
     routerLink: 'TW_portfolio/performing-document-review',
   },
   {
@@ -107,6 +141,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'Eight release notes showing seven different formats, from a bug fix to deprecation.',
     cardChipLabels: ['Deprecation Notice', 'Release Notes', 'Conditional UI Doc'],
+    imageUrl: 'release-note-sample.svg',
     routerLink: 'TW_portfolio/release-note-sample',
   },
   {
@@ -124,6 +159,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A multi-system workflow for timesheet approval, with built-in verification.',
     cardChipLabels: ['Embedded Verification', 'Internal Process', 'Multi-System Workflow'],
+    imageUrl: 'timesheet-approval-process.svg',
     routerLink: 'TW_portfolio/timesheet-approval-process',
   },
   {
@@ -141,6 +177,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A topic that describes a four-stage data import process and the dashboard that tracks it.',
     cardChipLabels: ['Process State Tracking', 'Internal Process', 'UI Element Reference'],
+    imageUrl: 'file-import-dashboard.svg',
     routerLink: 'TW_portfolio/file-import-dashboard',
   },
   {
@@ -158,11 +195,13 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A policy document that clients adopt directly, with variable fields for easy customization.',
     cardChipLabels: ['Policy Writing', 'GRC Client Deliverable', 'Compliance Writing'],
+    imageUrl: 'acceptable-use-policy.svg',
     routerLink: 'TW_portfolio/acceptable-use-policy',
   },
   {
     slug: 'business-impact-analysis',
     title: 'Creating a Business Impact Analysis',
+    cardTitle: 'Business Impact Analysis',
     subtitle: 'Excerpt from a step-by-step guide clients could adopt at their own company, explaining a complicated GRC process to assess their risk from a disruption to core services.',
     company: 'ProviDyn',
     role: 'Senior Technical Writer',
@@ -175,11 +214,13 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A GRC step-by-step guide for assessing risk from a disruption.',
     cardChipLabels: ['Stakeholder Coordination', 'GRC Client Deliverable', 'Role-Based Guidance'],
+    imageUrl: 'business-impact-analysis.svg',
     routerLink: 'TW_portfolio/business-impact-analysis',
   },
   {
     slug: 'risk-assessment',
     title: 'Creating a Risk Assessment',
+    cardTitle: 'Risk Assessment',
     subtitle: 'Excerpt from a step-by-step guide clients could adopt at their own company, explaining a complicated GRC process to protect their company against potential harm.',
     company: 'ProviDyn',
     role: 'Senior Technical Writer',
@@ -192,6 +233,7 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A GRC step-by-step guide on protecting their company against potential harm.',
     cardChipLabels: ['Decision Framework', 'GRC Client Deliverable', 'Structured Reference Table'],
+    imageUrl: 'risk-assessment.svg',
     routerLink: 'TW_portfolio/risk-assessment',
   },
 ];

@@ -16,6 +16,7 @@ import { FileImportDashboardTwSamplePage } from './pages/file-import-dashboard-t
 import { AcceptableUsePolicyTwSamplePage } from './pages/acceptable-use-policy-tw-sample-page';
 import { BusinessImpactAnalysisTwSamplePage } from './pages/business-impact-analysis-tw-sample-page';
 import { RiskAssessmentTwSamplePage } from './pages/risk-assessment-tw-sample-page';
+import { TwPortfolioIndexPage } from './pages/tw-portfolio-index-page';
 
 export const routes: Routes = [
     { path: '', component: Homepage, title: 'Meghan Neuman | Portfolio'},
@@ -24,8 +25,10 @@ export const routes: Routes = [
     { path: 'case-study/release-notes-process', component: ReleaseNotesProcessCaseStudyPage, title: 'Meghan Neuman | Release Notes Process Case Study' },
     { path: 'case-study/ai-tools', component: AiToolsCaseStudyPage, title: 'Meghan Neuman | AI Tools Case Study' },
     { path: 'case-study/help-center', component: HelpCenterCaseStudyPage, title: 'Meghan Neuman | Help Center Case Study' },
-    { path: 'about', component: AboutPage, title: 'Meghan Neuman | About' },
+    { path: 'about', component: AboutPage, title: 'Meghan Neuman | About', data: { testimonialVariant: 'uxr' } },
     { path: 'resume', component: ResumePage, title: 'Meghan Neuman | Resume' },
+    { path: 'TW_portfolio', component: TwPortfolioIndexPage, title: 'Meghan Neuman | Technical Writing Portfolio' },
+    { path: 'TW_portfolio/about', component: AboutPage, title: 'Meghan Neuman | About (Technical Writing)', data: { testimonialVariant: 'tw' } },
     { path: 'TW_portfolio/importing-migration-files', component: ImportingMigrationFilesTwSamplePage, title: 'Meghan Neuman | Importing Migration Files Sample' },
     { path: 'TW_portfolio/managing-billing-dates', component: ManagingBillingDatesTwSamplePage, title: 'Meghan Neuman | Managing Billing Dates Sample' },
     { path: 'TW_portfolio/performing-document-review', component: PerformingDocumentReviewTwSamplePage, title: 'Meghan Neuman | Performing a Document Review Sample' },

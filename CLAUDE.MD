@@ -49,3 +49,5 @@ When editing an existing page whose content is still inline (not yet migrated to
 ## Git workflow [New section]
 
 All feature work happens on the develop branch, created locally off main. Don't work directly on main. PRs are made from develop to main, one per feature or logical chunk of work, not one giant PR for everything. This is a small site, keep the branching strategy this simple rather than introducing additional long-lived branches, git-flow-style release branches, or per-feature branches off develop.
+
+**Opening the pull request itself is her task, not Claude's.** Claude's job ends at committing and pushing develop to origin. Once that's done, tell her it's ready and let her open the PR herself via GitHub's "Compare and pull request" button (comparing main ← develop) — don't attempt it via `gh pr create` or similar. She can also handle merging when she's ready.
