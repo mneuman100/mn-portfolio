@@ -14,12 +14,11 @@ A static personal portfolio site (Meghan Neuman) built with Angular 21, standalo
 npm start                # ng serve, dev server at localhost:4200, live reload
 npm run build             # production build -> dist/mn-portfolio
 npm run watch              # dev build, watches and rebuilds on change
-npm test                    # ng test (Vitest)
 ```
 
-- Run a single test file: `ng test --include='**/homepage.spec.ts'` (Vitest builder via Angular CLI).
 - No lint script/config exists in this repo yet — don't assume `npm run lint` works.
 - `npm run serve:ssr:mn-portfolio` runs the built SSR server (`node dist/mn-portfolio/server/server.mjs`); only works after `npm run build`.
+- **No unit tests, and none will be added.** This is a personal site with no backend, so there's no `npm test` workflow to maintain — don't write test files or suggest running `ng test`/Vitest. Verify changes by testing the feature directly in the browser against the `npm start` dev server instead.
 
 ## Architecture
 
