@@ -3,9 +3,9 @@
     <section class="hero">
       <div class="hero__content">
         <p class="hero__heading smaller-font heading-upper">Hi, I'm Meghan!</p>
-        <p class="hero__heading">As a senior technical writer, I've created approachable technical documentation for over 15 years, working both solo and within teams. My audience can rely on my documentation to get through a process quickly, with as little friction as possible.</p>
-        <p class="hero__heading">I enjoy digging deep into the subject or software and building strong relationships with subject matter experts so I can understand more than just the stated procedure. I want to know the full user journey, including where people are likely to stumble.</p>
-        <p class="hero__heading">I'm always thinking of my audience, and gently share usability issues and pain points that I've found to the product managers and engineering teams for their review.</p>
+        <p class="hero__blurb">As a senior technical writer, I've created approachable technical documentation for over 15 years, working both solo and within teams. My audience can rely on my documentation to get through a process quickly, with as little friction as possible.</p>
+        <p class="hero__blurb">I enjoy digging deep into the subject or software and building strong relationships with subject matter experts so I can understand more than just the stated procedure. I want to know the full user journey, including where people are likely to stumble.</p>
+        <p class="hero__blurb">I'm always thinking of my audience, and gently share usability issues and pain points that I've found to the product managers and engineering teams for their review.</p>
       </div>
     </section>
 
@@ -44,11 +44,13 @@
         <div class="grid__spacer"></div>
       </section>
 
-      <section class="testimonials timeline__item">
-        <div class="timeline__dot"></div>
-        <h2 class="testimonials__heading">Testimonials</h2>
-        <app-testimonials [testimonials]="testimonials" />
-      </section>
+      @if (showTestimonials) {
+        <section class="testimonials timeline__item">
+          <div class="timeline__dot"></div>
+          <h2 class="testimonials__heading">Testimonials</h2>
+          <app-testimonials [testimonials]="testimonials" />
+        </section>
+      }
     </div>
   </main>
 </div>

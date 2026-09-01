@@ -21,7 +21,7 @@
 
   &__content {
     max-width: 60rem;
-    text-align: center;
+    text-align: left;
   }
 
   &__heading {
@@ -31,6 +31,14 @@
     letter-spacing: -0.02em;
     color: rgba(0, 0, 0, 0.9);
     margin: 0;
+  }
+
+  &__blurb {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(0, 0, 0, 0.9);
+    margin: 1rem 0 0;
   }
 }
 
@@ -46,6 +54,7 @@
   position: relative;
 
   &__line {
+    display: none;
     position: absolute;
     left: 0;
     top: 0.5rem;
@@ -65,6 +74,7 @@
   }
 
   &__dot {
+    display: none;
     position: absolute;
     left: -3px;
     top: 0.15rem;
