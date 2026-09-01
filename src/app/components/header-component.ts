@@ -11,15 +11,26 @@ import { Router, RouterModule } from '@angular/router';
 export class HeaderComponent {
   private router = inject(Router);
 
+  private get isTwPortfolio(): boolean {
+    return this.router.url.startsWith('/TW_portfolio');
+  }
+
+  get homePath(): string {
+    return this.isTwPortfolio ? 'TW_portfolio' : '';
+  }
+
   get aboutPath(): string {
-    return this.router.url.startsWith('/TW_portfolio') ? 'TW_portfolio/about' : 'about';
+    return this.isTwPortfolio ? 'TW_portfolio/about' : 'about';
   }
 
   onWorkClick(): void {
-    if (this.router.url === '/') {
-      document.getElementById('work')!.scrollIntoView({ behavior: 'smooth' });
+    const path = this.homePath;
+    const workSectionId = this.isTwPortfolio ? 'writing-samples' : 'work';
+
+    if (this.router.url === '/' + path) {
+      document.getElementById(workSectionId)!.scrollIntoView({ behavior: 'smooth' });
     } else {
-      this.router.navigate([''], { queryParams: { work: 'true' } });
+      this.router.navigate([path], { queryParams: { work: 'true' } });
     }
   }
 

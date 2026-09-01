@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { ProjectCardComponent } from '../components/project-card-component';
 import { TestimonialsComponent } from '../components/testimonials-component';
 import { FadeInViewDirective } from '../utils/fade-in-view-directive';
@@ -19,7 +21,12 @@ const DOCUMENT_TYPE_FILTERS = ['Online Help Center', 'Release Notes', 'Internal 
   templateUrl: './tw-portfolio-index-page.html',
   styleUrl: './tw-portfolio-index-page.scss',
 })
-export class TwPortfolioIndexPage {
+export class TwPortfolioIndexPage implements OnInit {
+  @ViewChild('writingSamplesSection') writingSamplesSection!: ElementRef<HTMLElement>;
+
+  private router = inject(Router);
+  private location = inject(Location);
+
   readonly documentTypeFilters = DOCUMENT_TYPE_FILTERS;
   readonly cards: TwPortfolioCard[] = TW_SAMPLES.map(sample => ({
     project: twSampleToProject(sample),
@@ -41,5 +48,15 @@ export class TwPortfolioIndexPage {
 
   setFilter(filter: string | null): void {
     this.activeFilter = filter;
+  }
+
+  ngOnInit(): void {
+    const urlTree = this.router.parseUrl(this.router.url);
+    if (urlTree.queryParams['work'] === 'true') {
+      setTimeout(() => {
+        this.writingSamplesSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+      }, 0);
+      this.location.replaceState('/TW_portfolio');
+    }
   }
 }
