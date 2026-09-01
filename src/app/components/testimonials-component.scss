@@ -33,6 +33,15 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   }
 
+  &__quote-mark {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--coral);
+    margin-bottom: 0.25rem;
+  }
+
   &__quote {
     font-size: clamp(1rem, 2vw, 1.1875rem);
     font-weight: 500;
@@ -62,6 +71,12 @@
     gap: 0.75rem;
   }
 
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
   &__avatar {
     width: 2.5rem;
     height: 2.5rem;
@@ -80,6 +95,34 @@
     font-size: 0.8125rem;
     color: var(--stone-500);
     margin-top: 0.125rem;
+  }
+
+  // Redesigned stacked-card look (see the reference screenshot this was modeled on).
+  // The carousel markup above is left at its original sizing/coloring so it's a true fallback.
+  &--stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .recs__quote {
+      font-style: normal;
+    }
+
+    .recs__avatar {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .recs__name,
+    .recs__role {
+      font-size: 1.125rem;
+    }
+
+    .recs__role {
+      color: var(--coral);
+      font-weight: 700;
+      margin-top: 0;
+    }
   }
 
   &__tags {
