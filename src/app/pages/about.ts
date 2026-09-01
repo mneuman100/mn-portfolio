@@ -24,7 +24,8 @@ export class AboutPage implements OnInit {
 
   @ViewChild('recs') recs!: ElementRef<HTMLElement>;
 
-  readonly testimonials = this.route.snapshot.data['testimonialVariant'] === 'tw' ? TW_TESTIMONIALS : TESTIMONIALS;
+  readonly isTw = this.route.snapshot.data['testimonialVariant'] === 'tw';
+  readonly testimonials = this.isTw ? TW_TESTIMONIALS : TESTIMONIALS;
 
   readonly skillGroups: SkillGroup[] = [
     {

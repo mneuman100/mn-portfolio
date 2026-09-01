@@ -71,7 +71,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'importing-migration-files',
     title: 'Importing Migration Files',
     subtitle: 'This single-sourced mixed audience topic uses conditional text to hide internal facing procedures and notes (in orange) from external users. These processes also contain pre-requisites and error handling.',
-    company: 'Origami Risk',
+    company: 'Insurance Risk Management Software',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'MadCap Flare', category: TwTagCategory.Tool },
@@ -90,7 +90,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'managing-billing-dates',
     title: 'Managing Billing Dates',
     subtitle: 'This external-facing topic helps users find the specific configurations for a feature whose options live in two different places in the system. And depending on how the system is configured, a third location applies instead.',
-    company: 'Origami Risk',
+    company: 'Insurance Risk Management Software',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'MadCap Flare', category: TwTagCategory.Tool },
@@ -109,7 +109,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'performing-document-review',
     title: 'Performing a Document Review',
     subtitle: "An external users' guide to completing a task inside the system using secure access. Includes one internal-facing note.",
-    company: 'Origami Risk',
+    company: 'Insurance Risk Management Software',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'MadCap Flare', category: TwTagCategory.Tool },
@@ -127,7 +127,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'release-note-sample',
     title: 'Release Notes',
     subtitle: 'A set of eight release notes across two modules that include: a field change, a bug fix, a new capability, a beta graduation, a feature deprecation, conditional UI, and a field reference.',
-    company: 'Origami Risk',
+    company: 'Insurance Risk Management Software',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'MadCap Flare', category: TwTagCategory.Tool },
@@ -148,7 +148,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'timesheet-approval-process',
     title: 'Timesheet Approval Process',
     subtitle: 'A multi-system workflow for timesheet approval, with built-in verification.',
-    company: 'ProviDyn',
+    company: 'Managed IT Services Provider',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'Microsoft Word', category: TwTagCategory.Tool },
@@ -166,7 +166,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'file-import-dashboard',
     title: 'File Import Dashboard',
     subtitle: "An internal user's guide to a dashboard and four-stage data import process.",
-    company: 'ProviDyn',
+    company: 'Managed IT Services Provider',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'Microsoft Word', category: TwTagCategory.Tool },
@@ -184,7 +184,7 @@ export const TW_SAMPLES: TwSample[] = [
     slug: 'acceptable-use-policy',
     title: 'Acceptable Use Policy',
     subtitle: 'Excerpt from a policy document that clients could adopt at their own company with minimal updates. Fields were used in the document (shown in grey) for clients to easily update variables like company name and address.',
-    company: 'ProviDyn',
+    company: 'Managed IT Services Provider',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'Microsoft Word', category: TwTagCategory.Tool },
@@ -203,7 +203,7 @@ export const TW_SAMPLES: TwSample[] = [
     title: 'Creating a Business Impact Analysis',
     cardTitle: 'Business Impact Analysis',
     subtitle: 'Excerpt from a step-by-step guide clients could adopt at their own company, explaining a complicated GRC process to assess their risk from a disruption to core services.',
-    company: 'ProviDyn',
+    company: 'Managed IT Services Provider',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'Microsoft Word', category: TwTagCategory.Tool },
@@ -222,7 +222,7 @@ export const TW_SAMPLES: TwSample[] = [
     title: 'Creating a Risk Assessment',
     cardTitle: 'Risk Assessment',
     subtitle: 'Excerpt from a step-by-step guide clients could adopt at their own company, explaining a complicated GRC process to protect their company against potential harm.',
-    company: 'ProviDyn',
+    company: 'Managed IT Services Provider',
     role: 'Senior Technical Writer',
     tags: [
       { label: 'Microsoft Word', category: TwTagCategory.Tool },

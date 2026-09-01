@@ -11,12 +11,17 @@ import { Testimonial } from '../models/testimonial-model';
 export class TestimonialsComponent implements OnInit, OnDestroy {
   @Input() testimonials: Testimonial[] = [];
 
+  /** Set to true to bring back the rotating single-card carousel instead of the stacked list. */
+  showCarousel = false;
+
   currentIndex = 0;
 
   private autoPlayInterval?: ReturnType<typeof setInterval>;
 
   ngOnInit(): void {
-    this.autoPlayInterval = setInterval(() => this.next(), 5000);
+    if (this.showCarousel) {
+      this.autoPlayInterval = setInterval(() => this.next(), 5000);
+    }
   }
 
   ngOnDestroy(): void {
@@ -39,6 +44,7 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
   }
 
   private resetAutoPlay(): void {
+    if (!this.showCarousel) return;
     if (this.autoPlayInterval) clearInterval(this.autoPlayInterval);
     this.autoPlayInterval = setInterval(() => this.next(), 5000);
   }

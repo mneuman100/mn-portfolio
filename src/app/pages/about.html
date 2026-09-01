@@ -19,22 +19,40 @@
 
         <span class="hero__label">About me</span>
 
-        <h1 class="hero__heading">
-          Finding the problem<br />
-          <span class="hero__heading-accent">
-            behind the problem
-            <svg class="hero__underline" viewBox="0 0 100 10" preserveAspectRatio="none">
-              <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="transparent" />
-            </svg>
-          </span>
-        </h1>
+        @if (isTw) {
+          <h1 class="hero__heading">
+            Following the user journey,<br />
+            <span class="hero__heading-accent">
+              one document at a time
+              <svg class="hero__underline" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="transparent" />
+              </svg>
+            </span>
+          </h1>
 
-        <div class="hero__bio">
-          <p>I love digging into a problem to find all the possibilities, as well as learning about people's experiences
-            and what drives their decisions.  That curiosity doesn't stay in the research, it shows up in conversations too.
-            If you ask me a question and I take a beat too long to answer, I'm probably already
-            three steps down the line thinking about what gets affected by each possible path before I give you my answer.</p>
-        </div>
+          <div class="hero__bio">
+            <p>I'm a dedicated and empathetic senior technical writer who follows the user journey like your customers would and advocates for the user throughout the documentation process. </p>
+            <p>I create and keep internal templates, best practices, and documentation processes up-to-date for consistency across the project and team. In my documentation, I also use content templates, snippets (re-usable chunks of text), variables, and conditional text for the most efficient documentation output.</p>
+            <p>As someone who can touch a large portion of a project or system, I can easily cross over product line silos and teams to suggest consistency and UX improvements, as well as report any bugs found.</p>
+          </div>
+        } @else {
+          <h1 class="hero__heading">
+            Finding the problem<br />
+            <span class="hero__heading-accent">
+              behind the problem
+              <svg class="hero__underline" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="transparent" />
+              </svg>
+            </span>
+          </h1>
+
+          <div class="hero__bio">
+            <p>I love digging into a problem to find all the possibilities, as well as learning about people's experiences
+              and what drives their decisions.  That curiosity doesn't stay in the research, it shows up in conversations too.
+              If you ask me a question and I take a beat too long to answer, I'm probably already
+              three steps down the line thinking about what gets affected by each possible path before I give you my answer.</p>
+          </div>
+        }
       </div>
     </section>
 
