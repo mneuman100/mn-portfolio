@@ -28,6 +28,9 @@ export class TwPortfolioIndexPage {
 
   readonly testimonials = TW_TESTIMONIALS;
 
+  /** Set to true to bring the testimonials section back below the writing samples. */
+  showTestimonials = false;
+
   activeFilter: string | null = null;
 
   get visibleCards(): TwPortfolioCard[] {
