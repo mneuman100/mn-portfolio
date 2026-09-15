@@ -126,7 +126,7 @@ export const TW_SAMPLES: TwSample[] = [
   {
     slug: 'release-note-sample',
     title: 'Release Notes',
-    subtitle: 'A set of eight release notes across two modules that include: a field change, a bug fix, a new capability, a beta graduation, a feature deprecation, conditional UI, and a field reference.',
+    subtitle: 'A set of eight release notes across two modules that include: a field change, a bug fix, two new capabilities, a beta graduation, a feature deprecation, conditional UI, and a field reference.',
     company: 'Insurance Risk Management Software',
     role: 'Senior Technical Writer',
     tags: [
@@ -164,8 +164,8 @@ export const TW_SAMPLES: TwSample[] = [
   },
   {
     slug: 'file-import-dashboard',
-    title: 'File Import Dashboard',
-    subtitle: "An internal user's guide to a dashboard and four-stage data import process.",
+    title: 'File Import',
+    subtitle: "An internal user's guide to a dashboard and multi-stage data import process.",
     company: 'Managed IT Services Provider',
     role: 'Senior Technical Writer',
     tags: [

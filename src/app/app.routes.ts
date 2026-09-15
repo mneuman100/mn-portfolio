@@ -38,4 +38,20 @@ export const routes: Routes = [
     { path: 'TW_portfolio/acceptable-use-policy', component: AcceptableUsePolicyTwSamplePage, title: 'Meghan Neuman | Acceptable Use Policy Sample' },
     { path: 'TW_portfolio/business-impact-analysis', component: BusinessImpactAnalysisTwSamplePage, title: 'Meghan Neuman | Business Impact Analysis Sample' },
     { path: 'TW_portfolio/risk-assessment', component: RiskAssessmentTwSamplePage, title: 'Meghan Neuman | Risk Assessment Sample' },
+
+    // Lowercase aliases: web addresses are case-sensitive, and "tw_portfolio" is a natural way to type/paste this section's URL.
+    { path: 'tw_portfolio', redirectTo: 'TW_portfolio' },
+    { path: 'tw_portfolio/about', redirectTo: 'TW_portfolio/about' },
+    { path: 'tw_portfolio/importing-migration-files', redirectTo: 'TW_portfolio/importing-migration-files' },
+    { path: 'tw_portfolio/managing-billing-dates', redirectTo: 'TW_portfolio/managing-billing-dates' },
+    { path: 'tw_portfolio/performing-document-review', redirectTo: 'TW_portfolio/performing-document-review' },
+    { path: 'tw_portfolio/release-note-sample', redirectTo: 'TW_portfolio/release-note-sample' },
+    { path: 'tw_portfolio/timesheet-approval-process', redirectTo: 'TW_portfolio/timesheet-approval-process' },
+    { path: 'tw_portfolio/file-import-dashboard', redirectTo: 'TW_portfolio/file-import-dashboard' },
+    { path: 'tw_portfolio/acceptable-use-policy', redirectTo: 'TW_portfolio/acceptable-use-policy' },
+    { path: 'tw_portfolio/business-impact-analysis', redirectTo: 'TW_portfolio/business-impact-analysis' },
+    { path: 'tw_portfolio/risk-assessment', redirectTo: 'TW_portfolio/risk-assessment' },
+
+    // Safety net: any unrecognized address falls back to the homepage instead of rendering blank.
+    { path: '**', redirectTo: '' },
 ];
