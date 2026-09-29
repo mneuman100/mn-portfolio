@@ -23,6 +23,14 @@ const CATEGORY_CARD_COLOR: Record<TwTagCategory, string> = {
   [TwTagCategory.Skill]: 'blue',
 };
 
+// Card icon for each Document Type tag; every sample's card shows the icon matching its document type.
+const DOCUMENT_TYPE_ICON: Record<string, string> = {
+  'Online Help Center': 'icon-online-help-center.svg',
+  'Release Notes': 'icon-release-notes.svg',
+  'Internal Process': 'icon-internal-process.svg',
+  'GRC Client Deliverable': 'icon-grc-client-deliverable.svg',
+};
+
 export interface TwSampleTag {
   label: string;
   category: TwTagCategory;
@@ -39,7 +47,6 @@ export interface TwSample {
   tags: TwSampleTag[];
   cardBlurb: string;
   cardChipLabels: string[];
-  imageUrl: string;
   routerLink: string;
 }
 
@@ -60,7 +67,7 @@ export function twSampleToProject(sample: TwSample): Project {
   return {
     title: sample.cardTitle ?? sample.title,
     description: sample.cardBlurb,
-    imageUrl: sample.imageUrl,
+    imageUrl: DOCUMENT_TYPE_ICON[twSampleDocumentType(sample)],
     tags,
     routerLink: sample.routerLink,
   };
@@ -83,7 +90,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A topic that uses conditional content to hide internal-only steps, with prerequisites and error handling built in.',
     cardChipLabels: ['Conditional Content', 'Online Help Center', 'Mixed audience'],
-    imageUrl: 'importing-migration-files.svg',
     routerLink: 'TW_portfolio/importing-migration-files',
   },
   {
@@ -102,7 +108,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A topic that helps users find where to configure a billing date setting, since the right location depends on how the system is set up.',
     cardChipLabels: ['Override Logic', 'Online Help Center', 'System Navigation'],
-    imageUrl: 'managing-billing-dates.svg',
     routerLink: 'TW_portfolio/managing-billing-dates',
   },
   {
@@ -120,7 +125,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A guide for one-time external users using secure access.',
     cardChipLabels: ['First-Time User Guide', 'Online Help Center', 'Mixed audience'],
-    imageUrl: 'performing-document-review.svg',
     routerLink: 'TW_portfolio/performing-document-review',
   },
   {
@@ -141,7 +145,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'Eight release notes showing seven different formats, from a bug fix to deprecation.',
     cardChipLabels: ['Deprecation Notice', 'Release Notes', 'Conditional UI Doc'],
-    imageUrl: 'release-note-sample.svg',
     routerLink: 'TW_portfolio/release-note-sample',
   },
   {
@@ -159,7 +162,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A multi-system workflow for timesheet approval, with built-in verification.',
     cardChipLabels: ['Embedded Verification', 'Internal Process', 'Multi-System Workflow'],
-    imageUrl: 'timesheet-approval-process.svg',
     routerLink: 'TW_portfolio/timesheet-approval-process',
   },
   {
@@ -177,7 +179,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A topic that describes a four-stage data import process and the dashboard that tracks it.',
     cardChipLabels: ['Process State Tracking', 'Internal Process', 'UI Element Reference'],
-    imageUrl: 'file-import-dashboard.svg',
     routerLink: 'TW_portfolio/file-import-dashboard',
   },
   {
@@ -195,7 +196,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A policy document that clients adopt directly, with variable fields for easy customization.',
     cardChipLabels: ['Policy Writing', 'GRC Client Deliverable', 'Compliance Writing'],
-    imageUrl: 'acceptable-use-policy.svg',
     routerLink: 'TW_portfolio/acceptable-use-policy',
   },
   {
@@ -214,7 +214,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A GRC step-by-step guide for assessing risk from a disruption.',
     cardChipLabels: ['Stakeholder Coordination', 'GRC Client Deliverable', 'Role-Based Guidance'],
-    imageUrl: 'business-impact-analysis.svg',
     routerLink: 'TW_portfolio/business-impact-analysis',
   },
   {
@@ -233,7 +232,6 @@ export const TW_SAMPLES: TwSample[] = [
     ],
     cardBlurb: 'A GRC step-by-step guide on protecting their company against potential harm.',
     cardChipLabels: ['Decision Framework', 'GRC Client Deliverable', 'Structured Reference Table'],
-    imageUrl: 'risk-assessment.svg',
     routerLink: 'TW_portfolio/risk-assessment',
   },
 ];
